@@ -1,0 +1,27 @@
+ng-sidebar-container {
+    height: 100vh;
+}
+
+::ng-deep .ng-sidebar {
+    background-color: aquamarine;
+    width: 300px;
+    padding: 2rem 3rem;
+    box-shadow: 0 0 2.5rem rgba(85,85,85,0.5);
+}
+
+.menu {
+    margin-top: 2rem;
+    display: block;
+}
+
+.menu li {
+    margin-bottom: 15px;
+}
+.menu li a {
+    display: block;
+    width: 100%;
+}
+
+.buttom-open {
+    padding-left: 10px;
+}
