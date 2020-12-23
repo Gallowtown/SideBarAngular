@@ -1,0 +1,79 @@
+.col-12 .card {
+  margin-right: 12px;
+}
+
+.tamaño-4-2 {
+  width: 453px;
+  height: 276px;
+}
+
+.tam-card {
+  width: 253px;
+  height: 226px;
+}
+
+.border-card {
+  border: 1px solid #181f39;
+  border-radius: 10px;
+}
+
+.centrar {
+  margin: auto;
+}
+
+.h-justify {
+  height: 100%;
+  justify-content: center;
+}
+
+.vert-align {
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+}
+.img-card {
+  width: 223px;
+  height: 223px;
+}
+
+.bottom-card {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bottom-card div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.background-darkblue {
+  background-color: #181f39;
+}
+
+.color-gray {
+  color: #e7e7e9;
+}
+
+.btn-card {
+    font-size: 12px;
+    font-weight: 200;
+    border-radius: 10px;
+    padding: 4px 6px;
+    margin: auto;
+}
+
+
+.letra-titulo {
+    font-weight: bold;
+}
+
+.container {
+    align-items: flex-start !important;
+}
+
+
