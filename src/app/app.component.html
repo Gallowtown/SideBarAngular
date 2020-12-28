@@ -1,18 +1,29 @@
-<ng-sidebar-container>
+<ng-sidebar-container 
+(onBackdropClicked)="toggleAbrirMenu()"
+showBackdrop=false
+>
   <!-- menu lateral -->
   <ng-sidebar
     mode="push"
     dock="true"
     dockedSize="90px"
-    closeOnClickOutside="true"
-    [opened]="abrirMenu"
+    [opened]="abrirMenu" 
+    (onClosed)="toggleMenuIcon()"
+    (onOpenStart)="toggleMenuIcon()"
+    closeOnClickOutside=true
+    
   >
     <div class="row background-blue h-header">
-      <div class="col text-center">
-        <img src="..\assets\x_Genxapp.png" alt="noimg" class="w-75 p-2" />
+      <div class="col">
+        <div class=" text-center">
+          <img *ngIf="menuClosed" src="..\assets\x_Genxapp.png" alt="noimg" class="w-75 p-2" />     
+        </div>
+        <div >
+          <img *ngIf="!menuClosed" class="my-3" style="margin-left: 310px" src="..\assets\test-icon-faucet.png" alt="KK" />
+        </div>
       </div>
     </div>
-    <ul class="menu px-0">
+    <ul class="menu px-0" *ngIf="menuClosed">
       <li routerLink="/">
         <img src="..\assets\test-icon-faucet.png" alt="KK" />
         <a >DashBoard</a>
@@ -31,14 +42,35 @@
       </li>
       <li routerLink="/calidad">
         <img src="..\assets\test-icon-faucet.png" alt="KK" />
-        <a >Calidad</a>
+        <a ng-sidebar--opened >Calidad</a>
+      </li>   
+    </ul>
+    <!-- menu iconos2 -->
+    <ul class="menu menuIcon px-0" *ngIf="!menuClosed">
+      <li routerLink="/">            
+        <img class="" src="..\assets\test-icon-faucet.png" alt="KK" />
       </li>
-      
+      <li routerLink="/empresas">
+        <img src="..\assets\test-icon-faucet.png" alt="KK" />
+        
+      </li>
+      <li routerLink="/listar">
+        <img src="..\assets\test-icon-faucet.png" alt="KK" />
+        
+      </li>
+      <li routerLink="/crear">
+        <img src="..\assets\test-icon-faucet.png" alt="KK" />
+        
+      </li>
+      <li routerLink="/calidad">
+        <img src="..\assets\test-icon-faucet.png" alt="KK" />
+        
+      </li>   
     </ul>
   </ng-sidebar>
   <!-- contenido de la pagina -->
-  <div ng-sidebar-content>
-    <nav class="row-12 w-100 navbar background-darkblue py-2 px-1 m-0 h-header">
+  <div ng-sidebar-content >
+    <nav id="stickyHeader"  class="row-12 w-100 navbar background-darkblue py-2 px-1 m-0 h-header ">
       <div class="col-12 pl-4">
         <button class="no-btn" (click)="toggleAbrirMenu()">
           <svg viewBox="0 0 100 80" width="40" height="40" fill="white">

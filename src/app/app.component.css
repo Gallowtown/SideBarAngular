@@ -8,6 +8,8 @@ ng-sidebar-container {
   
 }
 
+
+
 a:hover {
   text-decoration: none;
 }
@@ -64,9 +66,15 @@ li {
   margin: auto;
 }
 
+
 .menu li a {
   display: block;
   width: 100%;
+}
+
+.menuIcon {
+  margin-left: 135px;
+
 }
 
 /* header  */
@@ -90,4 +98,20 @@ li {
   padding: 0px;
   height: 50%;
   width: 45%;
+}
+
+/* ::ng-deep .ng-sidebar--opened {
+  background-color: brown;
+} */
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
 }

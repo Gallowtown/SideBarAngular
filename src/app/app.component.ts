@@ -7,9 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sideBar-Prueba';
-  abrirMenu = false
+  abrirMenu = false;
+  menuClosed = true;
 
-  toggleAbrirMenu(){
+
+  
+
+  toggleAbrirMenu() {
     this.abrirMenu = !this.abrirMenu
   }
+
+  toggleMenuIcon() {
+    this.menuClosed = !this.menuClosed
+  }
+
+
 }
