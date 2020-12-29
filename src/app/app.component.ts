@@ -10,8 +10,7 @@ export class AppComponent {
   abrirMenu = false;
   menuClosed = true;
 
-
-  
+    
 
   toggleAbrirMenu() {
     this.abrirMenu = !this.abrirMenu

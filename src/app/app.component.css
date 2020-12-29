@@ -8,7 +8,11 @@ ng-sidebar-container {
   
 }
 
-
+.background-total {
+  background-image: url("../assets/-_1920x1080.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 a:hover {
   text-decoration: none;
@@ -30,6 +34,10 @@ li {
   background-color: #bca508;
 }
 
+.color-yellow {
+  color: #bca508;
+}
+
 .menu {
   width: 100%;
   padding: 10px;
@@ -46,6 +54,7 @@ li {
 
 .menu li {
   /* margin-bottom: 15px; */
+  padding-left: 5px;
   width: 100%;
   display: flex;
   height: 50px;
@@ -60,7 +69,7 @@ li {
 }
 
 .menu li img {
-  padding-left: 5px;
+  margin-left: 10px;
   height: 32px;
   width: 32px;
   margin: auto;
@@ -91,13 +100,62 @@ li {
 }
 
 .h-header {
-  height: 60px;
+  height: 80px;
+}
+
+.h-header-sticky {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 95%;
+}
+
+.h-header-sticky-open {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: calc(95% - 368px + 90px) ;
+}
+
+
+.header-lesson{
+  margin-top: 80px;
 }
 
 .img-little {
   padding: 0px;
   height: 50%;
   width: 45%;
+}
+
+.img-60{
+  width: 60px;
+  height: 60px;
+}
+
+.img-48{
+  width: 48px;
+  height: 48px;
+}
+
+.border-icon-header {
+  width: 52px;
+  height: 52px;
+  background-color: #223c77;
+  border-radius: 50px;
+  display: flex;
+  padding: 2.1px;
+  margin: auto;
+}
+
+.user-text {
+  font: bold;
+  font-size: 18px;
+  color: #bca508;
+  margin: auto;
+  
 }
 
 /* ::ng-deep .ng-sidebar--opened {
