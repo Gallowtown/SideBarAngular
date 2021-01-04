@@ -1,94 +1,228 @@
 /* Float four columns side by side */
 .column {
-    float: left;
-    width: 33%;
-    padding: 0 10px;
-    margin-bottom: 20px;
-  }
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
 
-  .column-50 {
-    float: left;
-    width: 50%;
-    padding: 0 10px;
-    margin-bottom: 20px;
-  }
-  
-  /* Remove extra left and right margins, due to padding in columns */
-  .row {
-    margin: 0 -5px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+.column-50 {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .card {
-    /* Add shadows to create the "card" effect */
-    display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 0px;
-  }
+  /* Add shadows to create the "card" effect */
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 0px;
+  position: relative;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 0px;
+}
+
+.img-card {
+  width: 100%;
+  height: 100%;
+  /* object-fit: scale-down; */
+}
+
+.card-img {
+  width: 223px;
+  height: 223px;
+}
+
+.dashboard-img {
+  width: 100%;
+  height: 214px;
+  margin: auto;
+}
+.img-fit {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.background-darkblue {
+  background-color: #181f39;
+}
+
+.btn-card-dash {
+  font-size: 12px;
+  font-weight: 200;
+  border-radius: 50px;
+  padding: 4px 15px;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+.color-yellow {
+  color: #ffd224;
+}
+
+.titulo-card {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.parrafo-card {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.blank-space-left {
+  position: absolute;
+  width: 10px;
+  height: 120px;
+  left: calc(5px);
+  top: calc(50% - 60px);
+  background-color: #ffffff;
+}
+
+.blank-space-right {
+  position: absolute;
+  width: 10px;
+  height: 120px;
+  right: calc(5px);
+  top: calc(50% - 60px);
+  background-color: #ffffff;
+}
+
+.border-yellow-dash {
+  border: 1px solid #ffd224;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* regiones grande */
+
+.img__wrap {
+  position: relative;
+}
+
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(250, 250, 250);
+
+  width: calc(100% - 20px);
+  margin: auto;
+  z-index: 99;
+  overflow-y: scroll;
+
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
   
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .container {
-    padding: 2px 0px;
-  }
+}
+/* 
+.column-50:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+} */
 
-  .img-card {
-    width: 100%;
-    height: 100%;
-    /* object-fit: scale-down; */
-  }
-  
-  .card-img{
-    width:223px;
-    height: 223px;
-  }
+.img__description {
+  transition: 0.2s;
+  transform: translateY(1em);
+}
 
-  .dashboard-img {
-    width: 100%;
-    height: 214px;
-    margin: auto;
-  }
-  .prueba{
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-  }
+/* .img__wrap:hover .img__description {
+  transform: translateY(0);
+} */
 
-  .background-darkblue {
-    background-color: #181f39;
-  }
+/* mas regiones pero dentro */
 
-  .btn-card-dash {
-    font-size: 12px;
-    font-weight: 200;
-    border-radius: 50px;
-    padding: 4px 15px;
-    margin: auto;
-    text-transform: uppercase;
-  }
-  
-  .color-yellow{
-    color: #FFD224;
-  }
+.column-33 div {
+  position: relative;
+  float: left;
+  width: 33.3%;
+  height: 50%;
+  padding: 0px;
+  margin: 0px;
+}
+.region-border div > a {
+  border: 1px solid #181f39;
+}
 
-  .titulo-card{
-    font-size: 20px;
-    font-weight: 400;
-  }
+.column-45 div {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
 
-  .parrafo-card{
-    font-size: 11px;
-    font-weight: 300;
-  }
+.region div > a,p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  color: #181f39;
+
+}
+
+.region div > a:hover {
+  text-decoration: none;
+  color:#ffd224;
+}
+
+.exit {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  z-index: 100;
+  font: 600;
+  font-size: 24px;
+  color: #181f39;
+}
+
+.exit:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.card-90{
+  height: 120px;
+  width: 120px;
+}
+
+.service-img{
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  top: calc(50% - 140px);
+  right: calc(50% - 60px);
+}

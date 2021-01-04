@@ -1,27 +1,144 @@
-<p>DashBoard</p>
 
-<div class="column-50">
+<div class="column-50 img-warp">
+  <div *ngIf="openService" class="img__description_layer region-border region column-45">
+    <a (click)="onOpenedService()" class="exit" >(X)</a>
+    <div>
+      <a class="img-warp" (click)="onOpenedRegion()"><img
+        src="../../assets/48x_Acueducto y alcantarillado.png"
+        alt="Acueducto"
+        class="service-img card-90"
+      />Acueducto</a>
+    </div>
+    <div>
+      <a>Aseo</a>
+    </div>  
+  </div>  
+  <div *ngIf="openRegions" class="img__description_layer region-border region column-33">
+    <a (click)="onOpenedRegion()" class="exit" >(X)</a>
+    <div>
+      <a class=""  >Opcion 1</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 12</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 13</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 14</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 1</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 1</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 12</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 13</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 14</a>
+    </div>
+    <div>
+      <a class="" href="#">Opcion 1</a>
+    </div>
+  </div>
+  
   <div class="card">
-    <div style="border: 1px solid #FFD224; margin: 10px; padding: 10px;">
+    <div class="border-yellow-dash">
+      <div class="blank-space-left"></div>
+      <div class="blank-space-right"></div>
       <div class="dashboard-img">
-        <img src="../../assets/TARIFARIO(2) 1200x1024.png" alt="Avatar" class="prueba" />
+        <img
+          src="../../assets/TARIFARIO(2) 1200x1024.png"
+          alt="Avatar"
+          class="img-fit"
+        />
       </div>
       <div class="container">
         <h4 class="titulo-card">Tarifario</h4>
-        <div class="d-flex"> 
+        <div class="d-flex">
           <p class="parrafo-card mt-2">
             el objetivo es calcular las tarifas Lorem ipsum dolor sit amet
             consectetur, adipisicing elit. Commodi hic nemo sequi est, quisquam
             laboriosam. Natus voluptatem labore, error alias distinctio debitis!
             Tempore labore maiores fuga earum animi distinctio placeat.
           </p>
-          <a class="btn background-darkblue py-1 color-yellow btn-card-dash ml-4" >
+          <a
+            class="btn background-darkblue py-1 color-yellow btn-card-dash ml-4"
+            (click)="onOpenedService()"
+          >
             ingresar
           </a>
         </div>
-        
       </div>
-    </div>  
+    </div>
+  </div>
+  
+</div>
+<!-- Card -->
+<div class="column-50">
+  <div class="card">
+    <div class="border-yellow-dash">
+      <div class="blank-space-left"></div>
+      <div class="blank-space-right"></div>
+      <div class="dashboard-img">
+        <img
+          src="../../assets/TARIFARIO(2) 1200x1024.png"
+          alt="Avatar"
+          class="img-fit"
+        />
+      </div>
+      <div class="container">
+        <h4 class="titulo-card">Tarifario</h4>
+        <div class="d-flex">
+          <p class="parrafo-card mt-2">
+            el objetivo es calcular las tarifas Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Commodi hic nemo sequi est, quisquam
+            laboriosam. Natus voluptatem labore, error alias distinctio debitis!
+            Tempore labore maiores fuga earum animi distinctio placeat.
+          </p>
+          <a
+            class="btn background-darkblue py-1 color-yellow btn-card-dash ml-4"
+          >
+            ingresar
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
+<div class="column-50">
+  <div class="card">
+    <div class="border-yellow-dash">
+      <div class="blank-space-left"></div>
+      <div class="blank-space-right"></div>
+      <div class="dashboard-img">
+        <img
+          src="../../assets/TARIFARIO(2) 1200x1024.png"
+          alt="Avatar"
+          class="img-fit"
+        />
+      </div>
+      <div class="container">
+        <h4 class="titulo-card">Tarifario</h4>
+        <div class="d-flex">
+          <p class="parrafo-card mt-2">
+            el objetivo es calcular las tarifas Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Commodi hic nemo sequi est, quisquam
+            laboriosam. Natus voluptatem labore, error alias distinctio debitis!
+            Tempore labore maiores fuga earum animi distinctio placeat.
+          </p>
+          <a
+            class="btn background-darkblue py-1 color-yellow btn-card-dash ml-4"
+          >
+            ingresar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

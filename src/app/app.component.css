@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
 ng-sidebar-container {
   height: 100vh;
 }
 
 ::ng-deep .ng-sidebar {
   background-color: #f3f3f3;
-  width: 368px;
+  width: 260px;
   
 }
 
@@ -16,6 +21,7 @@ ng-sidebar-container {
 
 a:hover {
   text-decoration: none;
+  color: #eed531;
 }
 
 ul {
@@ -82,7 +88,7 @@ li {
 }
 
 .menuIcon {
-  margin-left: 135px;
+  margin-left: 95px;
 
 }
 
@@ -100,28 +106,29 @@ li {
 }
 
 .h-header {
-  height: 80px;
+  height: 60px;
+  z-index: 102;
 }
 
 .h-header-sticky {
-  height: 80px;
+  height: 60px;
   position: fixed;
   top: 0;
-  z-index: 99;
-  width: 95%;
+  z-index: 102;
+  width: calc(100% - 60px);
 }
 
 .h-header-sticky-open {
-  height: 80px;
+  height: 60px;
   position: fixed;
   top: 0;
-  z-index: 99;
-  width: calc(95% - 368px + 90px) ;
+  z-index: 102;
+  width: calc(100% - 260px) ;
 }
 
 
 .header-lesson{
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .img-little {
@@ -130,19 +137,19 @@ li {
   width: 45%;
 }
 
-.img-60{
-  width: 60px;
-  height: 60px;
-}
-
 .img-48{
   width: 48px;
   height: 48px;
 }
 
+.img-32{
+  width: 32px;
+  height: 32px;
+}
+
 .border-icon-header {
-  width: 52px;
-  height: 52px;
+  width: 36px;
+  height: 36px;
   background-color: #223c77;
   border-radius: 50px;
   display: flex;
@@ -173,3 +180,4 @@ li {
 .sticky + .content {
   padding-top: 102px;
 }
+

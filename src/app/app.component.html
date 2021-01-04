@@ -4,24 +4,24 @@
   <ng-sidebar
     mode="push"
     dock="true"
-    dockedSize="90px"
+    dockedSize="60px"
     [(opened)]="abrirMenu" 
     (onClosed)="toggleMenuIcon()"
     (onOpenStart)="toggleMenuIcon()"
     closeOnClickOutside=true
     
   >
-    <div class="row background-blue h-header">
+    <div class="row navbar background-blue h-header"> 
       <div class="col">
-        <div class=" text-center">
+        <div class="text-center">
           <img *ngIf="menuClosed" src="..\assets\x_Genxapp.png" alt="noimg" class="w-75 p-2" />     
         </div>
         <div >
-          <img *ngIf="!menuClosed" class="my-3" style="margin-left: 310px" src="..\assets\test-icon-faucet.png" alt="KK" />
+          <img *ngIf="!menuClosed" class="my-2" style="margin-left: 190px" src="..\assets\test-icon-faucet.png" alt="KK" />
         </div>
       </div>
     </div>
-    <ul class="menu px-0" *ngIf="menuClosed">
+    <ul class="menu px-0 " *ngIf="menuClosed">
       <li routerLink="/">
         <img src="..\assets\test-icon-faucet.png" alt="KK" />
         <a >DashBoard</a>
@@ -68,7 +68,7 @@
   </ng-sidebar>
   <!-- contenido de la pagina -->
   <div ng-sidebar-content class="background-total w-100 h-100">
-    <nav id="stickyHeader" [ngClass]="{'h-header-sticky':!abrirMenu, 'h-header-sticky-open':abrirMenu}"  class="row-12  navbar background-darkblue py-2 px-1 m-0   d-flex">  
+    <nav [ngClass]="{'h-header-sticky':!abrirMenu,'h-header-sticky-open':abrirMenu}" class="row  navbar background-darkblue py-2 px-1 m-0 h-header">  
       
       <div class="pl-4">
         <button class="no-btn" (click)="toggleAbrirMenu()">
@@ -85,20 +85,20 @@
         </div>
         <div>
           <a href="">
-            <img class="img-60 mr-2" src="../assets/48x_User.png" alt="">
+            <img class="img-48 mr-2" src="../assets/48x_User.png" alt="">
           </a>
           
         </div>
         <div class="border-icon-header">
           <a href="">
-            <img class="img-48 " src="../assets/core-icon-gear.png" alt="">
+            <img class="img-32 " src="../assets/core-icon-gear.png" alt="">
           </a>    
         </div>
         
       </div>
     </nav>
-    <div class="p-4 header-lesson">
-      <router-outlet ></router-outlet>    <!-- aqui se cargan las paginas -->
+    <div class="p-4 header-lesson ">
+      <router-outlet  ></router-outlet>    <!-- aqui se cargan las paginas -->
     </div>
    
   </div>
