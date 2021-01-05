@@ -1,20 +1,24 @@
 
 <div class="column-50 img-warp">
   <div *ngIf="openService" class="img__description_layer region-border region column-45">
-    <a (click)="onOpenedService()" class="exit" >(X)</a>
+    <a (click)="onOpenedService()" class="exit" >X</a>
     <div>
-      <a class="img-warp" (click)="onOpenedRegion()"><img
+      <a class="img-warp service-warp" (click)="onOpenedRegion()"><img
         src="../../assets/48x_Acueducto y alcantarillado.png"
         alt="Acueducto"
         class="service-img card-90"
-      />Acueducto</a>
+      />Acueducto y alcantarillado</a>
     </div>
     <div>
-      <a>Aseo</a>
+      <a class="img-warp service-warp" (click)="onOpenedRegion()"><img
+        src="../../assets/48x_Aseo.png"
+        alt="Acueducto"
+        class="service-img card-90"
+      />Acueducto y alcantarillado</a>
     </div>  
   </div>  
   <div *ngIf="openRegions" class="img__description_layer region-border region column-33">
-    <a (click)="onOpenedRegion()" class="exit" >(X)</a>
+    <a (click)="onOpenedRegion()" class="exit" >X</a>
     <div>
       <a class=""  >Opcion 1</a>
     </div>

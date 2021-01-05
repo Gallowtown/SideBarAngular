@@ -223,6 +223,15 @@
   position: absolute;
   height: 120px;
   width: 120px;
-  top: calc(50% - 140px);
+  top: calc(50% - 100px);
   right: calc(50% - 60px);
+}
+
+.service-warp {
+  padding-top: 120px;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  flex-wrap: nowrap;
+  text-align: center;
 }
