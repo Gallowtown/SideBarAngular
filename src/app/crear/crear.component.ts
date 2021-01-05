@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearComponent implements OnInit {
 
+  validarForm = true
+  guardarForm = false
+
+  demosleGuardar() {
+    this.guardarForm = true
+    this.validarForm = !this.validarForm
+  }
+
+  
+
   constructor() { }
 
   ngOnInit(): void {

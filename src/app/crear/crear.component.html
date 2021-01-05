@@ -1,1 +1,77 @@
-<p>crear works!</p>
+<h1 class="tittle-h1" >Crear licencia</h1>
+<section class="container-form">
+  <div>
+    <h2 class="background-darkblue tittle-creation">Datos de las licencias</h2>
+  </div>
+  <form class="form-basic" action="">
+    <div class="input-basic-container">
+      <input class="input-basic" type="number" id="NumContrato" name="Numero de contrato"/>
+      <div class="blank-space-1"></div>
+      <div class="blank-space-2"></div>
+      <div class="blank-space-3"></div>
+      <div class="blank-space-4"></div>
+      <div class="text-blank"> Número de contrato</div>
+      <div class="placeholder-blank"> Ayuda</div>
+    </div>
+    <div class="d-flex">
+      <div [ngClass]="{'input-basic-container-failed':validarForm && guardarForm ,'input-basic-container-succes':!validarForm && guardarForm}" class="input-basic-container column-50 margin-between">
+        <input class="input-basic" type="number" id="NumContrato" name="Numero de contrato" />
+        <div class="blank-space-1"></div>
+        <div class="blank-space-2"></div>
+        <div class="blank-space-3"></div>
+        <!-- <div class="blank-space-4"></div> -->
+        <div class="text-blank"> Fecha de inicio </div>
+        <div class="placeholder-blank"> fecha en que inicio el registro de actividades de la empresa en GENXAPP</div>
+      </div>
+      <div [ngClass]="{'input-basic-container-failed':validarForm && guardarForm ,'input-basic-container-succes':!validarForm && guardarForm}" class="input-basic-container column-50">
+        <input class="input-basic" type="number" id="NumContrato" name="Numero de contrato" />
+        <div class="blank-space-1"></div>
+        <div class="blank-space-2"></div>
+        <div class="blank-space-3"></div>
+        <div class="blank-space-4"></div>
+        <div class="text-blank"> Número de contrato</div>
+        <div class="placeholder-blank"> Ayuda</div>
+      </div>
+    </div>
+    <div class="input-basic-container">
+      <select name="" id="" class="input-basic minimal">
+        <option value="prueba1">Prueba1!</option>
+        <option value="prueba2">Prueba2!</option>
+        <option value="prueba3">Prueba3!</option>
+        <option value="prueba4">Prueba4!</option>
+      </select>
+      <div class="blank-space-1"></div>
+      <div class="blank-space-2"></div>
+      <div class="blank-space-3"></div>
+      <div class="blank-space-4"></div>
+      <div class="text-blank"> Número de contrato</div>
+      <div class="placeholder-blank"> Ayuda</div>
+    </div>
+    <div class="input-basic-container">
+      <select name="" id="" class="input-basic minimal">
+        <option value="prueba1">Prueba!</option>
+        <option value="prueba2">Prueba!</option>
+        <option value="prueba3">Prueba!</option>
+        <option value="prueba4">Prueba!</option>
+      </select>
+      <div class="blank-space-1"></div>
+      <div class="blank-space-2"></div>
+      <div class="blank-space-3"></div>
+      <div class="blank-space-4"></div>
+      <div class="text-blank"> Número de contrato</div>
+      <div class="placeholder-blank"> Ayuda</div>
+    </div>
+    <div class=" d-flex w-100 align-right ">
+      <!-- <button (click)="demosleGuardar()" class="background-darkblue btn-submit"  type="submit" >
+        Guardar
+      </button>
+       -->
+       
+       <a (click)="demosleGuardar()" class="background-darkblue btn-submit "   >
+        <img src="../../assets/test-icon-faucet.png" alt="">
+        Guardar
+       </a>   
+    </div>
+    
+  </form>
+</section>

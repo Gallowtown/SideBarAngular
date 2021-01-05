@@ -37,6 +37,7 @@ body {
   border: 1px solid #181f39;
   border-radius: 10px;
   background-image: url("../../assets/fondo_tarjeta.png");
+  background-size: contain;
 }
 
 /* propios estilos */
