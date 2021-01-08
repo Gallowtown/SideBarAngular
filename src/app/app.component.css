@@ -54,7 +54,8 @@ li {
 }
 
 .menu li:hover {
-  background-color: white;
+  /* background-color: white; */
+  background: linear-gradient(90deg, rgba(14,0,255,1) 0%, rgba(121,9,9,1) 35%, rgba(245,255,0,1) 100%);
 }
 .menu li:focus {
   background-color: white;
@@ -68,13 +69,15 @@ li {
   display: flex;
   height: 50px;
   cursor: pointer;
+
 }
 
 .menu li a {
   padding-left: 10px;
   color: #181f39;
   margin: auto;
-  
+  display: block;
+  width: 100%;
 }
 
 .menu li img {
@@ -84,16 +87,87 @@ li {
   margin: auto;
 }
 
-
-.menu li a {
-  display: block;
+.menuDrop {
   width: 100%;
+  padding-left: 0px;
+  display: block;
+  /* background-color: cornflowerblue; */
+}
+
+
+.menuDrop li {
+  /* padding-left: 5px; */
+  margin: 0;
+  background-color: #f3f3f3;
+
+  position: relative;
+}
+
+.menuDrop:hover {
+  background-color: #f3f3f3;
+}
+
+.menuDrop li a {
+  padding-left: 5px;
+}
+
+.menuDrop li > img {
+  margin-left: 5px;
+}
+
+.menuDrop-item li > img {
+  margin-left: 15px;
+}
+
+.menuDrop li:hover {
+  background-color: white;
+}
+.menuDrop li:focus {
+  background-color: white;
+  border-right: 5px solid  #bca508;
+}
+
+/* .menuIcon .menuDrop li:focus {
+  background-color: rgb(211, 21, 21);
+  border-left: 5px solid  #bca508;
+} */
+
+.menuDrop-Arrow::after{
+content: "\25BC";
+  position: absolute;
+  right: 10px;
+  top: 25%;
+  /* bottom: 50%; */
 }
 
 .menuIcon {
   margin-left: 95px;
-
 }
+
+.menuIcon .menuDrop li{
+  margin-left: 8px;
+}
+
+/* .menuIcon .menuDrop-Arrow::after{
+  content: "\25BC";
+    position: absolute;
+    left: 52px;
+    top: 25%;
+    margin-left: 95px;
+ 
+  } */
+
+.menuIcon li img {
+  /* margin-left: 95px; */
+  margin: auto;
+}
+
+.menuIcon li a {
+  display: none;
+}
+
+
+
 
 /* header  */
 .no-btn {
@@ -110,22 +184,19 @@ li {
 
 .h-header {
   height: 60px;
-  z-index: 102;
+  z-index: 10;
 }
 
 .h-header-sticky {
-  height: 60px;
   position: fixed;
   top: 0;
-  z-index: 102;
   width: calc(100% - 60px);
 }
 
 .h-header-sticky-open {
-  height: 60px;
+
   position: fixed;
   top: 0;
-  z-index: 102;
   width: calc(100% - 260px) ;
 }
 

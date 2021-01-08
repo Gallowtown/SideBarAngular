@@ -8,8 +8,7 @@
     [(opened)]="abrirMenu" 
     (onClosed)="toggleMenuIcon()"
     (onOpenStart)="toggleMenuIcon()"
-    closeOnClickOutside=true
-    
+    closeOnClickOutside=true 
   >
     <div class="row navbar background-blue h-header"> 
       <div class="col">
@@ -21,14 +20,34 @@
         </div>
       </div>
     </div>
-    <ul class="menu px-0 " *ngIf="menuClosed">
-      <li routerLink="/">
-        <img src="..\assets\test-icon-faucet.png" alt="KK" />
-        <a >DashBoard</a>
+    <ul class="menu px-0 " [ngClass]="{'menuIcon':!abrirMenu,'':abrirMenu}">
+      <li class=" px-0" style="height: auto; min-height: 50px;">
+        <div id="accordion" class="w-100" >
+            <ul class="px-0 menuDrop" id="headingTwo ">
+              <li class="w-100 m-0 p-0 collapsed menuDrop-Arrow" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="KK" />
+                <a>
+                  configuraciones
+                </a>
+              </li>
+            </ul>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <ul class="menuDrop menuDrop-item">
+                <li routerLink="/empresas">
+                  <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="KK" />
+                  <a >Empresas2</a>
+                </li>
+                <li  routerLink="/crear">
+                  <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="KK" />
+                  <a >Empresas3</a>
+                </li>
+              </ul>
+            </div>
+        </div>
       </li>
       <li routerLink="/empresas">
         <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="KK" />
-        <a >Empresas</a>
+        <a >Empresas2</a>
       </li>
       <li routerLink="/listar">
         <img class="img-48" src="..\assets/32x_Empresa.png" alt="KK" />
@@ -40,36 +59,13 @@
       </li>
       <li routerLink="/calidad">
         <img src="..\assets\test-icon-faucet.png" alt="KK" />
-        <a ng-sidebar--opened >Calidad</a>
-      </li>   
-    </ul>
-    <!-- menu iconos2 -->
-    <ul class="menu menuIcon px-0" *ngIf="!menuClosed">
-      <li routerLink="/">            
-        <img class="img-48" src="..\assets\test-icon-faucet.png" alt="KK" />
-      </li>
-      <li routerLink="/empresas">
-        <img class="img-60" src="..\assets/48x_Configuraciones.png" alt="KK" />
-        
-      </li>
-      <li routerLink="/listar">
-        <img class="img-48" src="..\assets/32x_Empresa.png" alt="KK" />
-        
-      </li>
-      <li routerLink="/crear">
-        <img src="..\assets\test-icon-faucet.png" alt="KK" />
-        
-      </li>
-      <li routerLink="/calidad">
-        <img src="..\assets\test-icon-faucet.png" alt="KK" />
-        
+        <a>Calidad</a>
       </li>   
     </ul>
   </ng-sidebar>
   <!-- contenido de la pagina -->
-  <div ng-sidebar-content class="background-total w-100 h-100">
-    <nav [ngClass]="{'h-header-sticky':!abrirMenu,'h-header-sticky-open':abrirMenu}" class="row  navbar background-darkblue py-2 px-1 m-0 h-header">  
-      
+  <div ng-sidebar-content class="background-total w-100 h-100" >
+    <nav [ngClass]="{'h-header-sticky':!abrirMenu,'h-header-sticky-open':abrirMenu}" class="navbar background-darkblue py-2 px-1 m-0 h-header" style="overflow-x:hidden;">  
       <div class="pl-4">
         <button class="no-btn" (click)="toggleAbrirMenu()">
           <svg viewBox="0 0 100 80" width="25" height="25" fill="white">
@@ -98,7 +94,7 @@
       </div>
     </nav>
     <div class="p-4 header-lesson ">
-      <router-outlet  ></router-outlet>    <!-- aqui se cargan las paginas -->
+      <router-outlet></router-outlet>    <!-- aqui se cargan las paginas -->
     </div>
    
   </div>

@@ -30,7 +30,7 @@
   justify-content: flex-end;
   
 }
-/*estilos varios */
+/* estilos varios */
 
 .btn-submit{
   border: none;
@@ -38,7 +38,7 @@
   font-size: 18px;
   font-weight: 400;
   padding: 5px 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   text-decoration: none;
   user-select: none;
 }
@@ -49,6 +49,15 @@
   background-color: #bca508;
   color: #181f39;
   font-weight: 400;
+}
+
+.img-buttom:hover{
+  background-image:url("../../assets/core-icon-licencia.png");
+  height: 32px;
+  width: 32px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* blank spaces cada uno es un espacio en blanco en un input */
@@ -72,9 +81,9 @@
 
 .blank-space-3 {
   position: absolute;
-  width: 8px;
+  width: 6px;
   height: 6px;
-  right: calc(20% + 140px);
+  left: calc(60% );
   bottom: calc(0px - 3px);
   background-color: rgb(248, 248, 244);
 }
@@ -95,7 +104,7 @@
 
 .text-blank {
   position: absolute;
-  width: 140px;
+  width: auto;
   height: 14px;
   right: calc(10%);
   bottom: calc(0px - 5px);
@@ -114,7 +123,7 @@
 }
 
 .text-blank::after {
-  content: " *";
+  content: " * \00a0  ";
   color: red;
   font-weight: 400;
   /* background-color: rgb(248, 248, 244); */
@@ -123,7 +132,7 @@
 .placeholder-blank {
   position: absolute;
   /* background-color: rosybrown; */
-  width: 100%;
+  width: auto;
   height: 14px;
   left: calc(8px);
   bottom: calc(0% - 14px);
@@ -145,7 +154,7 @@
 .tittle-creation {
   font-size: 20px;
   font-weight: 400;
-  color: aliceblue;
+  color: rgb(248, 248, 244);
   padding: 12px 15px;
   border-radius: 5px;
   margin-bottom: 0;
@@ -178,6 +187,7 @@
   border-radius: 2px;
   padding: 5px 5px;
   margin-bottom: 40px;
+  transition: 0.5s;
 }
 
 .input-basic-container-failed:after{
@@ -190,15 +200,24 @@
   top: calc(50% - 18px);
   color: #d60f0f;
   z-index: 20;
+  transition: opacity 0.2s ease;
+  opacity: 0;
 }
+
+.input-basic-container-failed:focus-within:after{
+  opacity: 1;
+}
+ 
 
 .input-basic-container-failed .text-blank {
   color: #d60f0f;
   opacity: 1;
+  transition: 0.5s;
 }
 
 .input-basic-container-failed .text-blank::after {
   color: #d60f0f;
+  transition: 0.5s;
 }
 
 .input-basic-container-succes{
