@@ -1,4 +1,5 @@
-/* Float four columns side by side */
+/* utils */
+
 .column {
   float: left;
   width: 33%;
@@ -13,6 +14,28 @@
   padding: 0 10px;
   margin-bottom: 20px;
 }
+.img-card {
+  width: 100%;
+  height: 100%;
+  /* object-fit: scale-down; */
+}
+.dashboard-img {
+  width: 100%;
+  height: 214px;
+  margin: auto;
+}
+.img-fit {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.color-yellow {
+  color: #ffd224;
+}
+
+.background-darkblue {
+  background-color: #181f39;
+}
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {
@@ -26,8 +49,8 @@
   clear: both;
 }
 
+/* card stilos */
 .card {
-  /* Add shadows to create the "card" effect */
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -35,7 +58,6 @@
   position: relative;
 }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -45,31 +67,8 @@
   padding: 2px 0px;
 }
 
-.img-card {
-  width: 100%;
-  height: 100%;
-  /* object-fit: scale-down; */
-}
 
-.card-img {
-  width: 223px;
-  height: 223px;
-}
-
-.dashboard-img {
-  width: 100%;
-  height: 214px;
-  margin: auto;
-}
-.img-fit {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-}
-
-.background-darkblue {
-  background-color: #181f39;
-}
+/* dash cards estilos */
 
 .btn-card-dash {
   font-size: 12px;
@@ -78,10 +77,6 @@
   padding: 4px 15px;
   margin: auto;
   text-transform: uppercase;
-}
-
-.color-yellow {
-  color: #ffd224;
 }
 
 .titulo-card {
@@ -94,6 +89,7 @@
   font-weight: 300;
 }
 
+/* espacio izquierda de card dash */
 .blank-space-left {
   position: absolute;
   width: 10px;
@@ -102,7 +98,7 @@
   top: calc(50% - 60px);
   background-color: #ffffff;
 }
-
+/* espacio derecho de card dash */
 .blank-space-right {
   position: absolute;
   width: 10px;
@@ -120,9 +116,6 @@
 
 /* regiones grande */
 
-.img__wrap {
-  position: relative;
-}
 
 .img__description_layer {
   position: absolute;
@@ -139,22 +132,9 @@
 
   /* transition effect. not necessary */
   transition: opacity 0.2s, visibility 0.2s;
-  
-}
-/* 
-.column-50:hover .img__description_layer {
-  visibility: visible;
-  opacity: 1;
-} */
-
-.img__description {
-  transition: 0.2s;
-  transform: translateY(1em);
 }
 
-/* .img__wrap:hover .img__description {
-  transform: translateY(0);
-} */
+
 
 /* mas regiones pero dentro */
 
@@ -189,7 +169,6 @@
   font-size: 24px;
   font-weight: 600;
   color: #181f39;
-
 }
 
 .region div > a:hover {
@@ -197,6 +176,7 @@
   color:#ffd224;
 }
 
+/* boton de salir de regiones */
 .exit {
   position: absolute;
   right: 10px;
@@ -212,11 +192,6 @@
 .exit:hover {
   text-decoration: none;
   color: red;
-}
-
-.card-90{
-  height: 120px;
-  width: 120px;
 }
 
 .service-img{

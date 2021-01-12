@@ -13,7 +13,28 @@ ng-sidebar-container {
 ::ng-deep .ng-sidebar {
   background-color: #f3f3f3;
   width: 260px;
-  
+
+}
+
+/* utils */
+.header-lesson{
+  margin-top: 60px;
+}
+
+.img-little {
+  padding: 0px;
+  height: 50%;
+  width: 45%;
+}
+
+.img-48{
+  width: 48px;
+  height: 48px;
+}
+
+.img-32{
+  width: 32px;
+  height: 32px;
 }
 
 .background-total {
@@ -47,6 +68,7 @@ li {
   color: #bca508;
 }
 
+/* stilying menu */
 .menu {
   width: 100%;
   padding: 10px;
@@ -87,16 +109,17 @@ li {
   margin: auto;
 }
 
+/* algunos estilos del menu no se aplican en el de boostrap, estos los ponen a los necesarios */
+
+
+
 .menuDrop {
   width: 100%;
   padding-left: 0px;
   display: block;
-  /* background-color: cornflowerblue; */
 }
 
-
 .menuDrop li {
-  /* padding-left: 5px; */
   margin: 0;
   background-color: #f3f3f3;
 
@@ -127,19 +150,20 @@ li {
   border-right: 5px solid  #bca508;
 }
 
-/* .menuIcon .menuDrop li:focus {
-  background-color: rgb(211, 21, 21);
-  border-left: 5px solid  #bca508;
-} */
-
 .menuDrop-Arrow::after{
 content: "\25BC";
   position: absolute;
   right: 10px;
   top: 25%;
-  /* bottom: 50%; */
 }
 
+
+.menu-drop-toggle{
+  height: auto !important; /* esto asegura que mueva hacia abajo los demas items*/
+  min-height: 50px !important;
+}
+
+/* cuando se cierra el menu, Dock */
 .menuIcon {
   margin-left: 95px;
 }
@@ -148,29 +172,15 @@ content: "\25BC";
   margin-left: 8px;
 }
 
-/* .menuIcon .menuDrop-Arrow::after{
-  content: "\25BC";
-    position: absolute;
-    left: 52px;
-    top: 25%;
-    margin-left: 95px;
- 
-  } */
-
 .menuIcon li img {
-  /* margin-left: 95px; */
   margin: auto;
 }
-
 .menuIcon li a {
   display: none;
 }
 
-
-
-
 /* header  */
-.no-btn {
+.btn-egc {
   border: 0px;
   background-color: #181f39;
 }
@@ -200,27 +210,6 @@ content: "\25BC";
   width: calc(100% - 260px) ;
 }
 
-
-.header-lesson{
-  margin-top: 60px;
-}
-
-.img-little {
-  padding: 0px;
-  height: 50%;
-  width: 45%;
-}
-
-.img-48{
-  width: 48px;
-  height: 48px;
-}
-
-.img-32{
-  width: 32px;
-  height: 32px;
-}
-
 .border-icon-header {
   width: 36px;
   height: 36px;
@@ -236,22 +225,12 @@ content: "\25BC";
   font-size: 18px;
   color: #bca508;
   margin: auto;
-  
 }
 
+/* como afectar toda la navbar */
 /* ::ng-deep .ng-sidebar--opened {
   background-color: brown;
 } */
 
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 102px;
-}
 
