@@ -10,7 +10,7 @@
       <div class="blank-space-2"></div>
       <div class="blank-space-3"></div>
       <div class="blank-space-4"></div>
-      <div class="text-blank"> Número de contrato</div>
+      <label for="NumContrato" class="text-blank"> Número de contrato</label>
       <div class="placeholder-blank"> Ayuda</div>
     </div>
     <div class="d-flex">
@@ -20,7 +20,7 @@
         <div class="blank-space-2"></div>
         <div class="blank-space-3"></div>
         <!-- <div class="blank-space-4"></div> -->
-        <div class="text-blank"> Fecha de inicio </div>
+        <label class="text-blank"> Fecha de inicio </label>
         <div class="placeholder-blank"> fecha en que inicio el registro de actividades de la empresa en GENXAPP</div>
       </div>
       <div [ngClass]="{'input-basic-container-failed':validarForm && guardarForm ,'input-basic-container-succes':!validarForm && guardarForm}" class="input-basic-container column-50">
@@ -29,7 +29,7 @@
         <div class="blank-space-2"></div>
         <div class="blank-space-3"></div>
         <div class="blank-space-4"></div>
-        <div class="text-blank"> Fecha de vencimiento </div>
+        <label class="text-blank"> Fecha de vencimiento </label>
         <div class="placeholder-blank"> Fecha de vencimiento de actividades de la empresa en GENXAPP</div>
       </div>
     </div>
@@ -44,7 +44,7 @@
       <div class="blank-space-2"></div>
       <div class="blank-space-3"></div>
       <div class="blank-space-4"></div>
-      <div class="text-blank"> Modulo </div>
+      <label class="text-blank"> Modulo </label>
       <div class="placeholder-blank"> Modulo al cual se le abjudica la licencia</div>
     </div>
     <div class="input-basic-container">
@@ -58,19 +58,15 @@
       <div class="blank-space-2"></div>
       <div class="blank-space-3"></div>
       <div class="blank-space-4"></div>
-      <div class="text-blank"> Servicio </div>
+      <label class="text-blank"> Servicio </label>
       <div class="placeholder-blank"> Ayuda</div>
     </div>
-    <div class=" d-flex w-100 align-right ">
-      <!-- <button (click)="demosleGuardar()" class="background-darkblue btn-submit"  type="submit" >
-        Guardar
-      </button>
-       -->  
+
+    <div class="d-flex w-100 align-right">
        <a (click)="demosleGuardar()" class="background-darkblue btn-submit "   >
         <img  src="../../assets/test-icon-faucet.png" alt="">
         Guardar
        </a>   
     </div>
-    
   </form>
 </section>

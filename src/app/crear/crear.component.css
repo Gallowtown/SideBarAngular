@@ -88,26 +88,13 @@
   background-color: rgb(248, 248, 244);
 }
 
-/* .blank-space-4 {
-  position: absolute;
-  width: 140px;
-  height: 10px;
-  right: 10px;
-  bottom: calc(0px - 5px);
-  background-color: rgb(248, 248, 244);
-  z-index: 12;
-
-  font-size: 12px;
-  font-weight: 200;
-  user-select: none;
-} */
 
 .text-blank {
   position: absolute;
   width: auto;
   height: 14px;
   right: calc(10%);
-  bottom: calc(0px - 5px);
+  bottom: calc(0px - 15px);
   z-index: 12;
   background-color:rgb(248, 248, 244);
 
@@ -180,6 +167,21 @@
   margin-bottom: 40px;
 }
 
+.input-basic {
+  background-color: #e7e7e9;
+  padding: 4px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+}
+
+.input-basic:focus {
+  outline: none;
+}
+
+/* estados del input */
+
 .input-basic-container-failed{
   display: flex;
   position: relative;
@@ -237,40 +239,9 @@
   color: #0fd64b;
 }
 
-/* .input-basic-container-succes::after{
-  content: "|";
-  position: absolute;
-  font-size: 24px;
-  margin:0;
-  padding: 0;
-  right: -15px;
-  top: calc(50% - 18px);
-  color: #26d60f;
-  z-index: 20;
-} */
+/* modificacion de webkits formularios */
 
-
-/* .input-basic-container:focus-within {
-  --dev: #bdc7ec;
-  border: 1.5px solid var(--dev);
-} */
-
-
-.input-basic {
-  background-color: #e7e7e9;
-  padding: 4px;
-  border: none;
-  width: 100%;
-  height: 100%;
-  z-index: 15;
-}
-
-.input-basic:focus {
-  outline: none;
-
-}
-
-/* Modificacion de flechita de select */
+/* flechita de select */
 
 select.minimal {
   background-image: linear-gradient(55deg, transparent 40%, #181f39 50%),

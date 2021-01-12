@@ -1,6 +1,6 @@
 
-<div class="column-50 img-warp">
-  <div *ngIf="openService" class="img__description_layer region-border region column-45">
+<div class="card-50">
+  <div *ngIf="openService" class="img__description_layer region-border region column-50" style="overflow-y:auto;">
     <a (click)="onOpenedService()" class="exit" >X</a>
     <div>
       <a class="service-warp" (click)="onOpenedRegion()"><img
@@ -10,17 +10,17 @@
       />Acueducto y alcantarillado</a>
     </div>
     <div>
-      <a class=" service-warp" (click)="onOpenedRegion()"><img
+      <a class="service-warp" (click)="onOpenedRegion()"><img
         src="../../assets/48x_Aseo.png"
         alt="Acueducto"
-        class="service-img "
+        class="service-img"
       />Acueducto y alcantarillado</a>
     </div>
   </div>
-  <div *ngIf="openRegions" class="img__description_layer region-border region column-33">
+  <div *ngIf="openRegions" class="img__description_layer region-border region column-33" >
     <a (click)="onOpenedRegion()" class="exit" >X</a>
     <div>
-      <a class=""  >Opcion 1</a>
+      <a class="">Opcion 1</a>
     </div>
     <div>
       <a class="" href="#">Opcion 12</a>
@@ -84,7 +84,7 @@
 
 </div>
 <!-- Card -->
-<div class="column-50">
+<div class="card-50">
   <div class="card">
     <div class="border-yellow-dash">
       <div class="blank-space-left"></div>
@@ -115,7 +115,7 @@
     </div>
   </div>
 </div>
-<div class="column-50">
+<div class="card-50">
   <div class="card">
     <div class="border-yellow-dash">
       <div class="blank-space-left"></div>
@@ -137,7 +137,7 @@
             Tempore labore maiores fuga earum animi distinctio placeat.
           </p>
           <a
-            class="btn background-darkblue py-1 color-yellow btn-card-dash ml-4"
+            class="background-darkblue py-1 color-yellow btn-card-dash ml-4"
           >
             ingresar
           </a>

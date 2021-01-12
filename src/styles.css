@@ -1,8 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
- /* Hide scrollbar for Chrome, Safari and Opera */
 
- ::-webkit-scrollbar {
-    display: none;
-  }
 
-  
+/* globales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --dark-blue: #181f39;
+  --normal-blue: #1c2b4e;
+  --close-white: #f3f3f3;
+  --light-white: white;
+  --light-yellow: #eed531;
+  --dark-yellow:  #bca508;
+  --normal-gray: #e7e7e9;
+}

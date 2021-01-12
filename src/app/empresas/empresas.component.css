@@ -1,15 +1,24 @@
-* {
-  box-sizing: border-box;
+/* utils */
+
+.color-yellow {
+  color: #bca508;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  
+.background-darkblue {
+  background-color: #181f39;
+}
+
+.color-gray {
+  color: var(--normal-gray);
+}
+
+.relative-position{
+  position: relative;
 }
 
 
 /* Float four columns side by side */
-.column {
+.column-33 {
   float: left;
   width: 33%;
   padding: 0 10px;
@@ -29,7 +38,7 @@ body {
 }
 
 /* Style the counter cards */
-.card {
+.card-company {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 12px;
   text-align: center;
@@ -42,18 +51,11 @@ body {
 
 /* propios estilos */
 
-.img-card {
-  width: 223px;
-  height: 223px;
-  /* object-fit: scale-down; */
-}
-
 .card-img{
   width: 100%;
   height: 223px;
   margin: auto;
 }
-
 
 .img-fit{
   width: inherit;
@@ -61,32 +63,30 @@ body {
   object-fit: cover;
 }
 
-.interior-card {
+.flex-between {
   display: flex;
   justify-content: space-between;
-  padding: 0px;
-  margin: 0px;
+  
 }
 
 .text-title {
   margin: auto;
 }
 
-.color-yellow {
-  color: #bca508;
-  
-}
-
 .text-title p {
   font-weight: 600;
   font-size: 18px;
   padding: 6px;
+  margin: auto
 }
-.letra-titulo {
-  font-weight: 500;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 26px;
+
+.tittle-h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #181f39;
+  /* padding: 10px 20px; */
+  z-index: 12;
+  text-transform: uppercase;
 }
 
 .buttons-card {
@@ -97,18 +97,20 @@ body {
   flex-wrap: wrap;
 }
 
-.interior-cards-left {
-  display: flex;
-  justify-content: left;
-}
-
 .buttons-card a {
   margin-right: 5px;
   margin-left: 0px;
   margin-right: 0px;
 }
 
-.boton-crear {
+/* boton de crear */
+
+.btn-crear {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.btn-crear a {
   padding: 2px 8px 4px 8px;
   border-radius: 30px;
   background-color: #9ac902;
@@ -120,22 +122,9 @@ body {
   font-weight: 500;
 }
 
-.boton-crear:hover {
+.btn-crear a:hover {
   background-color: #6f9100;
   color: #e2fdde;
-}
-
-.boton-crear-centrar {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.background-darkblue {
-  background-color: #181f39;
-}
-
-.color-gray {
-  color: #e7e7e9;
 }
 
 .btn-card {
@@ -146,40 +135,7 @@ body {
   margin: auto;
 }
 
-@media screen and (max-width: 1140px) {
-  .interior-card {
-    display: block !important;
-  }
-  .buttons-card {
-    display: block;
-    margin-top: 5px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .column {
-    float: left;
-    width: 50%;
-    padding: 0 10px;
-  }
-  .img-card {
-    width: 200px;
-    height: 200px;
-  }
-
-  .card {
-    min-width: 226px;
-  }
-}
-
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
+/* breadcumbas de arriba el '> empresas > cards' */
 
 .breadcrumb1{
   margin: 0px;
@@ -187,10 +143,6 @@ body {
   left: 5px;
   bottom: -1px;
   color: #9ac902;
-}
-
-.relative-position{
-  position: relative;
 }
 
 /* Style the list */
@@ -229,3 +181,40 @@ ul.breadcrumb1 li a:hover {
   color: #6f9100;
   text-decoration: underline;
 }
+
+
+/* @media screen and (max-width: 1140px) {
+  .flex-between {
+    display: block !important;
+  }
+  .buttons-card {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+  }
+  .img-card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card {
+    min-width: 226px;
+  }
+} */
+
+/* Responsive columns - one column layout (vertical) on small screens */
+/* @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+} */
+

@@ -1,18 +1,7 @@
-.background-darkblue {
-  background-color: #181f39;
-}
 
-.tittle-h1 {
-  font-size: 24px;
-  font-weight: 400;
-  color: #181f39;
-  padding: 10px 20px;
-  z-index: 12;
-  text-transform: uppercase;
-}
 
 .btn-table {
-  background-color: #181f39;
+  background-color: var(--dark-blue);
   border: none;
   color: #e7e7e9;
   font-size: 18px;
@@ -26,20 +15,20 @@
 .btn-table:hover {
   text-decoration: none;
   cursor: pointer;
-  background-color: #bca508;
-  color: #181f39;
+  background-color: var(--dark-yellow);
+  color: var(--dark-blue);
   font-weight: 400;
 }
 
-.w-35{
+.svg-35{
   width: 32px;
   height: 32px;
-  fill: #181f39;
+  fill: var(--dark-blue);
   
 }
 
 .hover-icon-yellow:hover .w-35{
-  fill: #bca508;
+  fill: var(--dark-yellow);
 }
 
 .boton-crear {
@@ -58,39 +47,18 @@
   background-color: #6f9100;
   color: #e2fdde;
 }
-
-
-
 /* forms */
 
-.container-form {
-  padding: 10px 20px;
-}
-
-.tittle-creation {
-  font-size: 20px;
-  font-weight: 400;
-  color: rgb(248, 248, 244);
-  padding: 12px 15px;
-  border-radius: 5px;
-  margin-bottom: 0;
-  z-index: 12;
-}
-
-.form-basic3 {
-  margin-top: -2px;
+.table-basic {
   z-index: 10;
   background-color: rgb(248, 248, 244);
   padding: 5px 20px 15px 20px;
-  width: 100%;
-  height: 100%;
   margin-bottom: 10px;
-  display: flex;
 }
 
-.form-basic2 {
+.form-basic-show {
   margin-top: -2px;
-  z-index: 10;
+  z-index: 99;
   background-color: rgb(248, 248, 244);
   padding: 10px 20px 1px 20px;
   width: 100%;
@@ -100,7 +68,7 @@
 }
 
 .entry-border{
-  border: 1px solid #181f39;
+  border: 1px solid var(--dark-blue);
   border-radius: 4px;
   padding: 0.1rem 0.4rem;
   color: #bca508;
@@ -158,29 +126,3 @@
   padding-left: 6px ;
 }
 
-/* @media screen and  (max-width: 1000px) {
-  .table-group{
-    font-size: 10px;
-    background-color: red;
-     margin: 0;
-  }
-
-  .table-group td {
-    padding: 0px;
-  }
-
-  .table-group th{
-    font-size: 12px;
-  }
-  
-} */
-
-/* table {
-  table-layout: fixed;
-  width: 100%;   
-} */
-
-/* th,td {
-  
-  overflow-x:scroll;
-} */

@@ -1,6 +1,7 @@
 <ng-sidebar-container
 >
   <!-- menu lateral -->
+
   <ng-sidebar
     mode="push"
     dock="true"
@@ -10,62 +11,72 @@
     (onOpenStart)="toggleMenuIcon()"
     closeOnClickOutside=true
   >
+  <!-- header de menu lateral -->
     <div class="row navbar background-blue h-header">
       <div class="col">
         <div class="text-center">
-          <img *ngIf="menuClosed" src="..\assets\x_Genxapp.png" alt="noimg" class="w-75 p-2" />
+          <img *ngIf="menuClosed"  class="w-100" src="..\assets\x_Genxapp.png" alt="sidebar img"  />
         </div>
         <div >
-          <img *ngIf="!menuClosed" class="my-2" style="margin-left: 190px" src="..\assets\test-icon-faucet.png" alt="KK" />
+          <img *ngIf="!menuClosed" class="my-2 menuIcon-header"  src="..\assets\test-icon-faucet.png" alt="sidebar img" />
         </div>
       </div>
     </div>
-    <ul class="menu px-0 " [ngClass]="{'menuIcon':!abrirMenu,'':abrirMenu}">
+    <!-- opciones de menu letarel (cada <li> es una opcion )-->
+
+    <ul class="menu px-0" [ngClass]="{'menuIcon':!abrirMenu,'':abrirMenu}">
+
+      <!-- opcion desplegable -->
       <li class="menu-drop-toggle px-0">
         <div id="accordion" class="w-100" >
-            <ul class="px-0 menuDrop" id="headingTwo ">
-              <li class="w-100 m-0 p-0 collapsed menuDrop-Arrow" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="KK" />
+            <ul class="px-0 menuDrop" id="headingOne">
+              <li class="w-100 m-0 p-0 collapsed menuDrop-Arrow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="Side icon" />
                 <a>
-                  configuraciones
+                  Configuraciones
                 </a>
               </li>
             </ul>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <!-- opciones de menu desplegable -->
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <ul class="menuDrop menuDrop-item">
-                <li routerLink="/empresas">
-                  <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="KK" />
-                  <a >Empresas2</a>
+                <li routerLink="/">
+                  <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="Side icon" />
+                  <a >opcion 123</a>
                 </li>
                 <li  routerLink="/crear">
-                  <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="KK" />
-                  <a >Empresas3</a>
+                  <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="Side icon" />
+                  <a >opcion 258</a>
                 </li>
               </ul>
             </div>
         </div>
       </li>
+
       <li routerLink="/empresas">
-        <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="KK" />
-        <a >Empresas2</a>
+        <img  src="..\assets/48x_Configuraciones.png" alt="Side icon" />
+        <a >Empresas</a>
       </li>
       <li routerLink="/listar">
-        <img class="img-48" src="..\assets/32x_Empresa.png" alt="KK" />
+        <img  src="..\assets/32x_Empresa.png" alt="Side icon" />
         <a >Listar</a>
       </li>
       <li routerLink="/crear">
-        <img src="..\assets\test-icon-faucet.png" alt="KK" />
+        <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
         <a >Crear</a>
       </li>
       <li routerLink="/calidad">
-        <img src="..\assets\test-icon-faucet.png" alt="KK" />
+        <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
         <a>Calidad</a>
       </li>
     </ul>
   </ng-sidebar>
+
   <!-- contenido de la pagina -->
-  <div ng-sidebar-content class="background-total w-100 h-100" >
-    <nav [ngClass]="{'h-header-sticky':!abrirMenu,'h-header-sticky-open':abrirMenu}" class="navbar background-darkblue py-2 px-1 m-0 h-header" style="overflow-x:hidden;">
+
+  <div ng-sidebar-content class="background-total w-100 h-100"  >
+    <nav [ngClass]="{'h-header-sticky':!abrirMenu,'h-header-sticky-open':abrirMenu}" class="navbar h-header background-darkblue py-2 px-1 m-0 ">
+      
       <div class="pl-4">
         <button class="btn-egc" (click)="toggleAbrirMenu()">
           <svg viewBox="0 0 100 80" width="25" height="25" fill="white">
@@ -75,26 +86,27 @@
           </svg>
         </button>
       </div>
-      <div class="mr-4 d-flex ">
-        <div class="mr-3 user-text ">
+
+      <div class="mr-4 d-flex">
+        <div class="mr-3 a-navbar">
           <a href="#" class="color-yellow">Usuario</a>
         </div>
         <div>
           <a href="">
-            <img class="img-48 mr-2" src="../assets/48x_User.png" alt="">
+            <img class="img-48 mr-2" src="../assets/48x_User.png" alt="Usuario icon">
           </a>
         </div>
         <div class="border-icon-header">
           <a href="">
-            <img class="img-32 " src="../assets/core-icon-gear.png" alt="">
+            <img class="img-32" src="../assets/core-icon-gear.png" alt="Opciones Icon">
           </a>
         </div>
 
       </div>
     </nav>
-    <div class="p-4 header-lesson ">
-      <router-outlet></router-outlet>    <!-- aqui se cargan las paginas -->
+    <div class="p-4 header-lesson " >
+      <router-outlet  ></router-outlet>    <!-- aqui se cargan las paginas -->
     </div>
-
   </div>
+
 </ng-sidebar-container>

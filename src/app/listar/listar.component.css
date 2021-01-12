@@ -1,24 +1,13 @@
 /* utils */
 
-.column {
-  float: left;
-  width: 33%;
-  padding: 0 10px;
-  margin-bottom: 20px;
-}
-
-.column-50 {
+.card-50 {
   position: relative;
   float: left;
   width: 50%;
   padding: 0 10px;
   margin-bottom: 20px;
 }
-.img-card {
-  width: 100%;
-  height: 100%;
-  /* object-fit: scale-down; */
-}
+
 .dashboard-img {
   width: 100%;
   height: 214px;
@@ -30,7 +19,7 @@
   object-fit: cover;
 }
 .color-yellow {
-  color: #ffd224;
+  color: var(--dark-yellow);
 }
 
 .background-darkblue {
@@ -49,7 +38,7 @@
   clear: both;
 }
 
-/* card stilos */
+/* card estilos */
 .card {
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -66,7 +55,6 @@
 .container {
   padding: 2px 0px;
 }
-
 
 /* dash cards estilos */
 
@@ -109,13 +97,12 @@
 }
 
 .border-yellow-dash {
-  border: 1px solid #ffd224;
+  border: 1px solid var(--dark-yellow);
   margin: 10px;
   padding: 10px;
 }
 
-/* regiones grande */
-
+/* modulos al ingresar */
 
 .img__description_layer {
   position: absolute;
@@ -123,20 +110,15 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgb(250, 250, 250);
+  background:var(--light-white);
 
   width: calc(100% - 20px);
   margin: auto;
-  z-index: 99;
-  overflow-y: scroll;
-
-  /* transition effect. not necessary */
-  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 90;
+  overflow-y: auto;
 }
 
-
-
-/* mas regiones pero dentro */
+/* regiones al modulos */
 
 .column-33 div {
   position: relative;
@@ -146,17 +128,18 @@
   padding: 0px;
   margin: 0px;
 }
-.region-border div > a {
-  border: 1px solid #181f39;
-}
 
-.column-45 div {
+.column-50 div {
   position: relative;
   float: left;
   width: 50%;
   height: 100%;
   padding: 0px;
   margin: 0px;
+}
+
+.region-border div > a {
+  border: 1px solid var(--dark-blue);
 }
 
 .region div > a,p {
@@ -168,12 +151,12 @@
   width: 100%;
   font-size: 24px;
   font-weight: 600;
-  color: #181f39;
+  color: var(--dark-blue);
 }
 
 .region div > a:hover {
   text-decoration: none;
-  color:#ffd224;
+  color:var(--light-yellow);
 }
 
 /* boton de salir de regiones */
@@ -186,7 +169,7 @@
   z-index: 100;
   font: 600;
   font-size: 24px;
-  color: #181f39;
+  color: var(--dark-blue);
 }
 
 .exit:hover {
