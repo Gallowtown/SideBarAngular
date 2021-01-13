@@ -1,0 +1,105 @@
+<ng-sidebar-container
+>
+  <!-- menu lateral -->
+
+  <ng-sidebar
+    mode="push"
+    dock="true"
+    dockedSize="60px"
+    [(opened)]="abrirMenu"
+    (onClosed)="toggleMenuIcon()"
+    (onOpenStart)="toggleMenuIcon()"
+    closeOnClickOutside=true
+  >
+  <!-- header de menu lateral -->
+    <div class="row navbar background-blue h-header">
+      <div class="col">
+        <div class="text-center h-header">
+          <img *ngIf="menuClosed"  class="w-100" src="..\assets\x_Genxapp.png" alt="sidebar img"  />
+          <img *ngIf="!menuClosed" class="menuIcon-header"  src="..\assets\test-icon-faucet.png" alt="sidebar img" />
+        </div>
+      </div>
+    </div>
+    <!-- opciones de menu letarel (cada <li> es una opcion )-->
+
+    <ul class="menu px-0" [ngClass]="{'menuIcon':!abrirMenu,'':abrirMenu}">
+
+      <!-- opcion desplegable -->
+      <li class="menu-drop-toggle px-0">
+        <div id="accordion" class="w-100" >
+            <ul class="px-0 menuDrop" id="headingOne">
+              <li class="w-100 m-0 p-0 collapsed menuDrop-Arrow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="Side icon" />
+                <a>
+                  Configuraciones
+                </a>
+              </li>
+            </ul>
+            <!-- opciones de menu desplegable -->
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <ul class="menuDrop menuDrop-item">
+                <li routerLink="/dash">
+                  <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="Side icon" />
+                  <a >opcion 123</a>
+                </li>
+                <li  routerLink="/crear">
+                  <img class="img-48" src="..\assets/48x_Configuraciones.png" alt="Side icon" />
+                  <a >opcion 258</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </li>
+
+      <li routerLink="/empresas">
+        <img  src="..\assets/48x_Configuraciones.png" alt="Side icon" />
+        <a >Empresas</a>
+      </li>
+      <li routerLink="/listar">
+        <img  src="..\assets/32x_Empresa.png" alt="Side icon" />
+        <a >Tarifarios</a>
+      </li>
+      <li routerLink="/crear">
+        <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
+        <a >Crear licencia</a>
+      </li>
+      <li routerLink="/dash">
+        <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
+        <a>Listar licencias</a>
+      </li>
+      <li routerLink="/crearrepre">
+        <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
+        <a>Crear representante</a>
+      </li>
+      <li routerLink="/calidad">
+        <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
+        <a>Listar representates</a>
+      </li>
+      <li routerLink="/generartoken">
+        <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
+        <a>Generar token</a>
+      </li>
+      <li routerLink="/listartoken">
+        <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
+        <a>Listar tokens</a>
+      </li>
+
+      
+    </ul>
+    <div class="pl-4" style="margin-left: 195px;">
+        <button class="btn-egc" (click)="toggleAbrirMenu()">
+          <svg viewBox="0 0 100 80" width="25" height="25" fill="white">
+            <rect width="100" height="10" rx="7" ry="7"></rect>
+            <rect y="30" width="100" height="10" rx="7" ry="7"></rect>
+            <rect y="60" width="100" height="10" rx="7" ry="7"></rect>
+          </svg>
+        </button>
+      </div>
+  </ng-sidebar>
+  <div ng-sidebar-content class="background-total w-100 h-100"  >
+      <app-navbar></app-navbar>
+  </div>
+
+  <!-- contenido de la pagina -->
+
+</ng-sidebar-container>

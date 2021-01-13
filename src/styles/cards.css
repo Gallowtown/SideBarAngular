@@ -1,0 +1,17 @@
+.card-50 {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.card-company {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 12px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #181f39;
+  border-radius: 10px;
+  background-image: url("../../src/assets/fondo_tarjeta.png");
+  background-size: contain;
+}

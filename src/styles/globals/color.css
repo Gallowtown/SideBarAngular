@@ -1,0 +1,30 @@
+
+/*------- colores del proyecto -------*/
+
+:root {
+    --dark-blue: #181f39;
+    --normal-blue: #1c2b4e;
+    --close-white: #f3f3f3;
+    --light-white: white;
+    --light-yellow: #eed531;
+    --dark-yellow:  #bca508;
+    --normal-gray: #e7e7e9;
+  }
+
+  /*----- clases con colores ------*/
+
+  .background-darkblue {
+    background-color: var(--dark-blue);
+  }
+  
+  .background-blue {
+    background-color: var(--normal-blue);
+  }
+
+  .color-yellow {
+    color: var(--dark-yellow);
+  }
+  
+  .color-gray {
+    color: var(--normal-gray);
+  }

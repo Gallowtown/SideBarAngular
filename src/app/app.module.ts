@@ -8,7 +8,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmpresasComponent } from './empresas/empresas.component';
 import { ListarComponent } from './listar/listar.component';
 import { CrearComponent } from './crear/crear.component';
-import { CalidadComponent } from './calidad/calidad.component'
+import { CalidadComponent } from './calidad/calidad.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CrRepresentanteComponent } from './cr-representante/cr-representante.component';
+import { GenerartokenComponent } from './generartoken/generartoken.component';
+import { ListartokenComponent } from './listartoken/listartoken.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { CalidadComponent } from './calidad/calidad.component'
     EmpresasComponent,
     ListarComponent,
     CrearComponent,
-    CalidadComponent
+    CalidadComponent,
+    SidebarComponent,
+    NavbarComponent,
+    CrRepresentanteComponent,
+    GenerartokenComponent,
+    ListartokenComponent
   ],
   imports: [
     BrowserModule,

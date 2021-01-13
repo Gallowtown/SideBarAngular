@@ -1,0 +1,128 @@
+/* implementacion de sidebar */
+
+ng-sidebar-container {
+    height: 100vh;
+  }
+  
+  ::ng-deep .ng-sidebar {
+    background-color: var(--close-white);
+    width: 260px;
+  }
+  
+  /* stilying menu */
+  .menu {
+    width: 100%;
+    padding: 10px;
+    display: block;
+  }
+  
+  .menu li:hover {
+    background-color: var(--light-white);
+  }
+  .menu li:focus {
+    background-color: var(--light-white);
+    border-right: 5px solid  var(--dark-yellow);
+  }
+  
+  .menu li {
+    padding-left: 5px;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .menu li a {
+    padding-left: 10px;
+    color: var(--dark-blue);
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+  
+  .menu li img {
+    margin-left: 10px;
+    height: 32px;
+    width: 32px;
+    margin: auto;
+  }
+  
+  /* algunos estilos del menu no se aplican en el de boostrap, estos los ponen a los necesarios */
+  
+  .menuDrop {
+    width: 100%;
+    padding-left: 0px;
+    display: block;
+  }
+  
+  .menuDrop li {
+    margin: 0;
+    background-color: var(--close-white);
+  
+    position: relative;
+  }
+  
+  .menuDrop:hover {
+    background-color: var(--close-white);
+  }
+  
+  .menuDrop li a {
+    padding-left: 5px;
+  }
+  
+  .menuDrop li > img {
+    margin-left: 5px;
+  }
+  
+  .menuDrop-item li > img {
+    margin-left: 15px;
+  }
+  
+  .menuDrop li:hover {
+    background-color: var(--light-white);
+  }
+  .menuDrop li:focus {
+    background-color: var(--light-white);
+    border-right: 5px solid  var(--dark-yellow);
+  }
+  
+  .menuDrop-Arrow::after{
+  content: "\25BC";
+    position: absolute;
+    right: 10px;
+    top: 25%;
+  }
+  
+  .menu-drop-toggle{
+    height: auto !important; /* esto asegura que mueva hacia abajo los demas items*/
+    min-height: 50px !important;
+  }
+  
+  /* cuando se cierra el menu, Dock */
+  
+  .menuIcon-header{
+    margin-left: 190px;
+    margin-top: 5px;
+  }
+  
+  .menuIcon {
+    margin-left: 95px;
+  }
+  
+  .menuIcon .menuDrop li{
+    margin-left: 8px;
+  }
+  
+  .menuIcon li img {
+    margin: auto;
+    
+  }
+  .menuIcon li a {
+    display: none;
+  }
+  
+ 
+  /* como afectar toda la sidebar */
+/* ::ng-deep .ng-sidebar--opened {
+    background-color: brown;
+  } */

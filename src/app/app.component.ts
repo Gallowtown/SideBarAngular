@@ -6,19 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'sideBar-Prueba';
-  abrirMenu = false;
-  menuClosed = true;
+  // abrirMenu = false;
+  // menuClosed = true;
 
-    
+  // toggleAbrirMenu() {
+  //   this.abrirMenu = !this.abrirMenu
+  // }
 
-  toggleAbrirMenu() {
-    this.abrirMenu = !this.abrirMenu
-  }
-
-  toggleMenuIcon() {
-    this.menuClosed = !this.menuClosed
-  }
+  // toggleMenuIcon() {
+  //   this.menuClosed = !this.menuClosed
+  // }
 
 
 }

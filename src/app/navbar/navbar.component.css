@@ -1,0 +1,33 @@
+/* navbar de contenidos  */
+
+.h-header-sticky {
+  position: fixed;
+  top: 0;
+  width: calc(100% - 60px);
+  /* width: 100%; */
+}
+
+.h-header-sticky-open {
+  position: fixed;
+  top: 0;
+  width: calc(100% - 260px); /* este estilo no se esta viendo porque aun no mando nada al ts*/
+  /* width: 100%; */
+}
+
+.border-icon-header {
+  width: 36px;
+  height: 36px;
+  background-color: var(--normal-blue);
+  border-radius: 50px;
+  display: flex;
+  padding: 2.1px;
+  margin: auto;
+}
+
+.a-navbar {
+  font: bold;
+  font-size: 18px;
+  color: var(--dark-yellow);
+  margin: auto;
+}
+

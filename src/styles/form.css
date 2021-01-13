@@ -1,0 +1,245 @@
+
+/* boton  de submit */
+
+.btn-submit{
+    border: none;
+    color: var(--normal-gray);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    user-select: none;
+  }
+  
+  .btn-submit:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #bca508;
+    color: #181f39;
+    font-weight: 400;
+  }
+  
+  .img-buttom:hover{
+    background-image: url("../../src/assets/core-icon-licencia.png");
+    height: 32px;
+    width: 32px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  /* blank spaces, cada uno es un espacio en blanco en un input */
+  
+  .blank-space-1 {
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    left: calc(30%);
+    top: calc(0px - 3px);
+    background-color: rgb(248, 248, 244);
+  }
+  .blank-space-2 {
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    left: calc(30% + 22px);
+    top: calc(0px - 3px);
+    background-color: rgb(248, 248, 244);
+  }
+  
+  .blank-space-3 {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: calc(60% );
+    bottom: calc(0px - 3px);
+    background-color: rgb(248, 248, 244);
+  }
+  
+  /* este es la label debajo del input  */
+  
+  .text-blank {
+    position: absolute;
+    width: auto;
+    height: 14px;
+    right: calc(10%);
+    bottom: calc(0px - 15px);
+    z-index: 12;
+    background-color:rgb(248, 248, 244);
+  
+    font-size: 12px;
+    font-weight: 400;
+    user-select: none;
+  }
+  
+  .text-blank::before {
+    content: "\00a0 ";
+  
+    z-index: 10;
+  }
+  
+  .text-blank::after {
+    content: " * \00a0  ";
+    color: red;
+    font-weight: 400;
+  
+  }
+  
+  /* esto es la 'ayuda' debajo del input */
+  
+  .placeholder-blank {
+    position: absolute;
+    width: auto;
+    height: 14px;
+    left: calc(8px);
+    bottom: calc(0% - 14px);
+    z-index: 12;
+  
+    font-size: 8px;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-style: italic;
+    user-select: none;
+  }
+  
+  /* forms */
+  
+  .container-form {
+    padding: 10px 20px;
+  }
+  
+  .tittle-creation {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--light-white);
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 0;
+    z-index: 12;
+  }
+  
+  .form-basic {
+    margin-top: -2px;
+    z-index: 10;
+    background-color:var(--light-white);
+    padding: 35px 20px 15px 20px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .input-basic-container {
+    display: flex;
+    position: relative;
+    border: 1.5px solid var(--dark-blue);
+    border-radius: 2px;
+    padding: 5px 5px;
+    margin-bottom: 40px;
+  }
+  
+  .input-basic {
+    background-color: var(--normal-gray);
+    padding: 4px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+  }
+  
+  .input-basic:focus {
+    outline: none;
+  }
+  
+  /* estados del input */
+  
+  .input-basic-container-failed{
+    display: flex;
+    position: relative;
+    border: 1.5px solid #d60f0f;
+    border-radius: 2px;
+    padding: 5px 5px;
+    margin-bottom: 40px;
+    transition: 0.5s;
+  }
+  
+  .input-basic-container-failed:after{
+    content: "X";
+    position: absolute;
+    font-size: 24px;
+    margin:0;
+    padding: 0;
+    right: -20px;
+    top: calc(50% - 18px);
+    color: #d60f0f;
+    z-index: 20;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+  }
+  
+  .input-basic-container-failed:focus-within:after{
+    opacity: 1;
+  }
+   
+  
+  .input-basic-container-failed .text-blank {
+    color: #d60f0f;
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .input-basic-container-failed .text-blank::after {
+    color: #d60f0f;
+    transition: 0.5s;
+  }
+  
+  .input-basic-container-succes{
+    display: flex;
+    position: relative;
+    border: 1.5px solid #0fd64b;
+    border-radius: 2px;
+    padding: 5px 5px;
+    margin-bottom: 40px;
+  }
+  
+  .input-basic-container-succes .text-blank {
+    color: #0fd64b;
+  }
+  
+  .input-basic-container-succes .text-blank::after {
+    color: #0fd64b;
+  }
+  
+  /* ----- modificacion de webkits formularios -----*/
+  
+  /* flechita de select */
+  
+  select.minimal {
+    background-image: linear-gradient(55deg, transparent 40%, #181f39 50%),
+      linear-gradient(125deg, #181f39 40%, transparent 50%);
+    /* linear-gradient(to right, #ccc, #ccc); */
+    background-position: calc(100% - 20px) calc(1em), calc(100% - 15px) calc(1em);
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+  }
+  
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+  
+  /* modificacion webkits de navegadores */
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }

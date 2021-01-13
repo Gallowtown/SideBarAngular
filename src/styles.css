@@ -1,24 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-/* globales */
+/*------- globales --------*/
+
+/* fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
 
-* {
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box;
-}
+/* colores */
+@import '../src/styles/globals/color.css'; 
 
-::-webkit-scrollbar {
-  display: none;
-}
+/* estilos base y normalizacion de algunos parametros */
+@import '../src/styles/globals/base.css'; 
 
-:root {
-  --dark-blue: #181f39;
-  --normal-blue: #1c2b4e;
-  --close-white: #f3f3f3;
-  --light-white: white;
-  --light-yellow: #eed531;
-  --dark-yellow:  #bca508;
-  --normal-gray: #e7e7e9;
-}
+/* breadcumbs */
+@import '../src/styles/breadcumb.css'; 
+
+/* tarjetas */
+@import '../src/styles/cards.css'; 
+
+/* tablas */
+@import '../src/styles/table.css'; 
+
+/* formularios */
+@import '../src/styles/form.css'; 
+
