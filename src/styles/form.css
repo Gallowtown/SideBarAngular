@@ -15,7 +15,7 @@
   .btn-submit:hover{
     text-decoration: none;
     cursor: pointer;
-    background-color: #bca508;
+    background-color: var(--dark-yellow);
     color: #181f39;
     font-weight: 400;
   }
@@ -66,7 +66,7 @@
     right: calc(10%);
     bottom: calc(0px - 15px);
     z-index: 12;
-    background-color:rgb(248, 248, 244);
+    background-color:var(--light-white);
   
     font-size: 12px;
     font-weight: 400;
@@ -129,7 +129,7 @@
     margin-bottom: 10px;
   }
   
-  .input-basic-container {
+  .input-basic-container { /* cambiar este nombre a input-border-container */
     display: flex;
     position: relative;
     border: 1.5px solid var(--dark-blue);

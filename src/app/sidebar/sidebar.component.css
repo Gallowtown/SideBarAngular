@@ -58,9 +58,9 @@ ng-sidebar-container {
   .menuDrop li {
     margin: 0;
     background-color: var(--close-white);
-  
     position: relative;
   }
+
   
   .menuDrop:hover {
     background-color: var(--close-white);
