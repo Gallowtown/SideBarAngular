@@ -4,20 +4,38 @@
 .btn-submit{
     border: none;
     color: var(--normal-gray);
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 400;
-    padding: 5px 10px;
-    border-radius: 4px;
+    padding: 6px 10px;
+    border-radius: 25px;
     text-decoration: none;
     user-select: none;
+    background-color: var(--dark-blue);
   }
   
   .btn-submit:hover{
     text-decoration: none;
     cursor: pointer;
     background-color: var(--dark-yellow);
-    color: #181f39;
+    color: var(--dark-blue);
     font-weight: 400;
+    
+  }
+
+  .btn-submit svg{
+    width: 15px;
+    height: 15px;
+    fill: var(--light-white);
+    margin-right: 0.4rem;
+  }
+  .btn-submit path.cls-5{
+
+    fill: red;
+  
+  }
+
+  .btn-submit:hover svg{
+    fill: var(--dark-blue) !important;
   }
   
   .img-buttom:hover{

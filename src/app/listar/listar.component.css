@@ -20,13 +20,24 @@
 
 /* dash cards estilos */
 
-.btn-card-dash {
+.btn-style {
   font-size: 12px;
   font-weight: 200;
   border-radius: 50px;
   padding: 4px 15px;
   margin: auto;
   text-transform: uppercase;
+  color: var(--dark-yellow);
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  background-color: var(--dark-blue);
+}
+
+.btn-style:hover {
+  color: var(--dark-blue);
+  font-weight: 200;
+  background-color: var(--dark-yellow);
+  cursor: pointer;
 }
 
 .titulo-card {
