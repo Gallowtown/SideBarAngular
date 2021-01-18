@@ -1,0 +1,176 @@
+.breach-container{
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: 0.3fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+.breach-container-one{
+    background-color: var(--light-white);
+    border-radius: 8px;
+}
+
+.breach-container-one h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.breach-container-one hr{
+    height: 0.5px;
+    background-color: var(--dark-blue);
+}
+
+.breach-container-one ul{
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    margin-left: 0;
+    padding: 0;
+    overflow-y: scroll;
+    max-height: 37.5rem;
+}
+
+.breach-container-one li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: 0.2s;
+}
+.breach-container-one li:hover{
+    background-color: var(--light-yellow);
+    
+}
+.breach-container-one li:focus-within{
+    background-color: var(--light-yellow);
+    
+}
+
+.breach-container-one a{
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    display: flex;
+    width: 100%;
+    color: var(--dark-blue);
+    font-weight: 200;
+}
+
+.breach-container-one a:hover{
+    text-decoration: none;
+}
+
+.breach-container-one a:focus-within{
+    background-color: var(--light-yellow);
+}
+
+.breach-container-two {
+    background-color: var(--light-white);
+    border-radius: 8px;
+}
+
+
+/* tabs */
+
+.breach-tab-container{
+    margin-bottom: 1rem;
+}
+
+.brech-tab-list {
+    width: 100%;
+    /* background-color: var(--light-white); */
+}
+
+.brech-tab-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    
+}
+.brech-tab-list ul li{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid var(--dark-blue);  
+    transition: 0.2s;
+}
+.brech-tab-list ul li:nth-child(1){
+    border-radius: 8px 0 0 0;
+}
+.brech-tab-list ul li:nth-child(3){
+    border-radius: 0 8px 0 0;  
+}
+
+.brech-tab-list ul li:focus-within{
+    border-bottom: 4px solid var(--dark-yellow);
+}
+
+.brech-tab-list ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.brech-tab-list ul li a{
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+/* table */
+
+.breach-table{
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.breach-table h3 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--dark-blue);  
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin: 0;
+}
+
+.breach-table table{
+    width: 100%;
+    background-color:mediumaquamarine;
+    text-align: center;
+}
+.breach-table table th{
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    background-color: var(--normal-blue);
+    color: var(--light-white);
+    font-weight: 400;
+    border: 1px solid var(--dark-blue);
+    text-transform: capitalize;
+}
+.breach-table table td{
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    background-color: var(--light-white);
+    border: 1px solid var(--dark-blue);
+    font-weight: 200;
+    font-size: 14px;
+}
+.breach-table table td:first-child{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+

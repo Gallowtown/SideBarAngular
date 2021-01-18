@@ -6,7 +6,7 @@ ng-sidebar-container {
   
   ::ng-deep .ng-sidebar {
     background-color: var(--close-white);
-    width: 260px;
+    width: 200px;
   }
   
   /* stilying menu */
@@ -101,12 +101,12 @@ ng-sidebar-container {
   /* cuando se cierra el menu, Dock */
   
   .menuIcon-header{
-    margin-left: 190px;
+    margin-left: 130px;
     margin-top: 5px;
   }
   
   .menuIcon {
-    margin-left: 95px;
+    margin-left: 65px;
   }
   
   .menuIcon .menuDrop li{

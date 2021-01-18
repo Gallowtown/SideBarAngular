@@ -1,0 +1,50 @@
+.card-indicators-container{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.card-indicators{
+    background-color: var(--light-white);
+    border: 1px solid var(--dark-blue);
+    border-radius: 8px;
+    margin-right: 4rem;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-indicators:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.4);
+}
+.card-indicators img{
+    padding: 1rem;
+    /* ya tiene los estilos de img-fit */
+}
+
+
+.card-indicators a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    width: inherit;
+    justify-content: center;
+    background-color: var(--light-yellow);
+    border-radius: 0 0 8px 8px;
+    transition: 0.3s;
+}
+
+.card-indicators a:last-child:hover{
+    background-color: var(--dark-yellow) !important;
+    cursor: pointer;
+    color: var(--light-white);
+}
+
+

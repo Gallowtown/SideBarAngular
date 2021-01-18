@@ -1,0 +1,11 @@
+.claims-select {
+    padding: 14px 10px;
+    width: 50%;
+    border: none;
+    border-radius: 8px;
+    color: var(--dark-blue);
+}
+
+.claims-select option:focus{
+    border: none;
+}

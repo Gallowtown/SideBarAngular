@@ -6,8 +6,11 @@ import { CrearComponent } from './crear/crear.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmpresasComponent } from './empresas/empresas.component';
 import { GenerartokenComponent } from './generartoken/generartoken.component';
+import { Incumplientos2Component } from './incumplientos2/incumplientos2.component';
+import { IncumplimientosComponent } from './incumplimientos/incumplimientos.component';
 import { ListarComponent } from './listar/listar.component';
 import { ListartokenComponent } from './listartoken/listartoken.component';
+import { ReclamosComponent } from './reclamos/reclamos.component';
 
 
 const routes: Routes = [
@@ -42,6 +45,18 @@ const routes: Routes = [
   {
     path:"generartoken",
     component:GenerartokenComponent
+  },
+  {
+    path:"incum",
+    component:IncumplimientosComponent
+  },
+  {
+    path:"incum2",
+    component:Incumplientos2Component
+  },
+  {
+    path:"reclamos",
+    component:ReclamosComponent
   }
 ];
 
