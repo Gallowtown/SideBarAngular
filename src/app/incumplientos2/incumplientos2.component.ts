@@ -8,6 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class Incumplientos2Component implements OnInit {
   tittle = "Incumplimientos"
 
+  tabroutes = "frecuencia"
+
+  changeRoute(newTab: string){
+    console.log(newTab)
+    this.tabroutes = newTab
+
+
+  }
+
   constructor() { }
 
   ngOnInit(): void {

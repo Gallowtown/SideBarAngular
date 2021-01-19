@@ -23,131 +23,378 @@
   <div class="breach-container-two">
       <div class="brech-tab-list">
           <ul>
-              <li><a href="" onclick="return false;"> Frecuencia </a></li>
-              <li><a href="" onclick="return false;"> Horario </a></li>
-              <li><a href="" onclick="return false;"> Indicadores</a></li>
+              <li [ngClass]="{'brech-tab-list-active': tabroutes == 'frecuencia' }" (click)="changeRoute('frecuencia')" ><a > Frecuencia </a></li>
+              <li [ngClass]="{'brech-tab-list-active': tabroutes == 'horario' }" (click)="changeRoute('horario')"><a  > Horario </a></li>
+              <li [ngClass]="{'brech-tab-list-active': tabroutes == 'indicadores' }" (click)="changeRoute('indicadores')"> <a  > Indicadores</a></li>
           </ul>
       </div>
-      <div class="breach-tab-container">
-        <div class="breach-table">
-            <h3>AÑO 2020</h3>
-            <table>
-                <tr>
-                    <th>Semestre 1</th>
-                    <th>enero</th>
-                    <th>febrero</th>
-                    <th>abril</th>
-                    <th>marzo</th>
-                    <th>mayo</th>
-                    <th>junio</th>
-                </tr>
-                <tr>
-                    <td>NDR</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                </tr>
-                <tr>
-                    <td>IFR_NA</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                </tr>
-                <tr>
-                    <th>Semestre 2</th>
-                    <th>enero</th>
-                    <th>febrero</th>
-                    <th>abril</th>
-                    <th>marzo</th>
-                    <th>mayo</th>
-                    <th>junio</th>
-                </tr>
-                <tr>
-                    <td>NDR</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                </tr>
-                <tr>
-                    <td>IFR_NA</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                </tr>
-            </table>  
-        </div>
+      <div [ngSwitch]="tabroutes" class="breach-tab-container">
+          <div *ngSwitchCase="'frecuencia'">
+            <div  class="indicator-table">
+                <h3>AÑO 2020</h3>
+                <table>
+                    <tr>
+                        <th>Semestre 1</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <th>Semestre 2</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                </table>  
+            </div>
+            
+            <div class="indicator-table">
+                <h3>AÑO 2021A</h3>
+                <table>
+                    <tr>
+                        <th>Semestre 1</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <th>Semestre 2</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                </table>  
+            </div>
+          </div>
+          <!--  -->
+          <div *ngSwitchCase="'horario'">
+            <div  class="indicator-table">
+                <h3>AÑO 2020B</h3>
+                <table>
+                    <tr>
+                        <th>Semestre 1</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <th>Semestre 2</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                </table>  
+            </div>
+            
+            <div class="indicator-table">
+                <h3>AÑO 2021</h3>
+                <table>
+                    <tr>
+                        <th>Semestre 1</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <th>Semestre 2</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                </table>  
+            </div>
+          </div>
+          <!--  -->
+          <div *ngSwitchCase="'indicadores'">
+            <div  class="indicator-table">
+                <h3>AÑO 2020C</h3>
+                <table>
+                    <tr>
+                        <th>Semestre 1</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <th>Semestre 2</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                </table>  
+            </div>
+            
+            <div class="indicator-table">
+                <h3>AÑO 2021</h3>
+                <table>
+                    <tr>
+                        <th>Semestre 1</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <th>Semestre 2</th>
+                        <th>enero</th>
+                        <th>febrero</th>
+                        <th>abril</th>
+                        <th>marzo</th>
+                        <th>mayo</th>
+                        <th>junio</th>
+                    </tr>
+                    <tr>
+                        <td>NDR</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>IFR_NA</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                        <td>asd</td>
+                    </tr>
+                </table>  
+            </div>
+          </div>
         
-        <div class="breach-table">
-            <h3>AÑO 2020</h3>
-            <table>
-                <tr>
-                    <th>Semestre 1</th>
-                    <th>enero</th>
-                    <th>febrero</th>
-                    <th>abril</th>
-                    <th>marzo</th>
-                    <th>mayo</th>
-                    <th>junio</th>
-                </tr>
-                <tr>
-                    <td>NDR</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                </tr>
-                <tr>
-                    <td>IFR_NA</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                </tr>
-                <tr>
-                    <th>Semestre 2</th>
-                    <th>enero</th>
-                    <th>febrero</th>
-                    <th>abril</th>
-                    <th>marzo</th>
-                    <th>mayo</th>
-                    <th>junio</th>
-                </tr>
-                <tr>
-                    <td>NDR</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                </tr>
-                <tr>
-                    <td>IFR_NA</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                </tr>
-            </table>  
-        </div>
 
       </div>
   </div>

@@ -16,7 +16,10 @@ import { GenerartokenComponent } from './generartoken/generartoken.component';
 import { ListartokenComponent } from './listartoken/listartoken.component';
 import { IncumplimientosComponent } from './incumplimientos/incumplimientos.component';
 import { Incumplientos2Component } from './incumplientos2/incumplientos2.component';
-import { ReclamosComponent } from './reclamos/reclamos.component'
+import { ReclamosComponent } from './reclamos/reclamos.component';
+import { MacrorutascpvComponent } from './macrorutascpv/macrorutascpv.component';
+import { MacrorutasComponent } from './macrorutas/macrorutas.component';
+import { GenerarmacrorutasComponent } from './generarmacrorutas/generarmacrorutas.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { ReclamosComponent } from './reclamos/reclamos.component'
     ListartokenComponent,
     IncumplimientosComponent,
     Incumplientos2Component,
-    ReclamosComponent
+    ReclamosComponent,
+    MacrorutascpvComponent,
+    MacrorutasComponent,
+    GenerarmacrorutasComponent
   ],
   imports: [
     BrowserModule,

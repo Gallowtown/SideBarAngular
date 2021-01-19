@@ -117,6 +117,9 @@ ng-sidebar-container {
     margin: auto;
     
   }
+  .menuIcon span {
+    margin-left: 79px;
+  }
   .menuIcon li a {
     display: none;
   }

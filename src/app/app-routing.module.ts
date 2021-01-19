@@ -5,11 +5,14 @@ import { CrRepresentanteComponent } from './cr-representante/cr-representante.co
 import { CrearComponent } from './crear/crear.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmpresasComponent } from './empresas/empresas.component';
+import { GenerarmacrorutasComponent } from './generarmacrorutas/generarmacrorutas.component';
 import { GenerartokenComponent } from './generartoken/generartoken.component';
 import { Incumplientos2Component } from './incumplientos2/incumplientos2.component';
 import { IncumplimientosComponent } from './incumplimientos/incumplimientos.component';
 import { ListarComponent } from './listar/listar.component';
 import { ListartokenComponent } from './listartoken/listartoken.component';
+import { MacrorutasComponent } from './macrorutas/macrorutas.component';
+import { MacrorutascpvComponent } from './macrorutascpv/macrorutascpv.component';
 import { ReclamosComponent } from './reclamos/reclamos.component';
 
 
@@ -57,7 +60,20 @@ const routes: Routes = [
   {
     path:"reclamos",
     component:ReclamosComponent
+  },
+  {
+    path:"macrorutascpv",
+    component:MacrorutascpvComponent
+  },
+  {
+    path:"macrorutas",
+    component:MacrorutasComponent
+  },
+  {
+    path:"generarmacro",
+    component:GenerarmacrorutasComponent
   }
+
 ];
 
 @NgModule({

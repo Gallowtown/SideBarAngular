@@ -177,16 +177,59 @@ li {
 .btn-crear a {
   padding: 2px 8px 4px 8px;
   border-radius: 30px;
-  background-color: #9ac902;
+  background-color: var(--light-yellow);
   height: 30px;
   text-align: center;
   text-decoration: none;
-  color: #181f39;
+  color: var(--dark-blue);
   font-size: 18px;
   font-weight: 500;
 }
 
 .btn-crear a:hover {
-  background-color: #6f9100;
-  color: #e2fdde;
+  background-color: var(--dark-yellow);
+  color: var(--dark-blue);
+}
+
+/* animaciones */
+
+.animation-circle {
+  position: relative;
+}
+
+.animation-circle img {
+  z-index: 50;
+}
+
+.animation-circle span {
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+}
+
+.animation-circle.menudrop-animation span{
+  top: 5px;
+  left: 4px;
+}
+
+.animation-circle:focus-within span {
+  background-color: var(--light-yellow);
+  border-radius: 25px;
+  transition: 0.4s;
+  transform-origin: center;
+  transform: scale(1);
+  animation: grow 1s normal;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
