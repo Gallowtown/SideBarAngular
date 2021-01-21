@@ -1,0 +1,108 @@
+.modal-frecuency{
+    background-color: var(--light-white);
+    border-radius: 8px;
+    border: none;
+    /* max-height: ; */
+}
+
+.modal-frecuency div {
+    background-color: var(--normal-blue);
+    display: flex;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.modal-frecuency div div {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 8px;
+    margin: 0;
+}
+
+.modal-frecuency div div h4:last-child{ 
+    text-transform: uppercase;
+}
+
+
+.modal-frecuency div > h4 {
+    font-weight: 200;
+    margin: 0;
+    font-size: 18px;
+    color: var(--light-white);
+    
+}
+
+.modal-frecuency div > a {
+    
+    font-size: 18px;
+    padding: 15px 12px;
+    color: var(--light-white);
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.modal-frecuency div > a:hover {
+    
+    color: red;
+
+}
+
+.modal-frecuency h5{
+    font-size: 14px;
+    padding: 0px 15px;
+    color: var(--dark-blue);
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+
+
+/* form modal */
+
+.form-group-modal{
+    width: 100%;
+}
+.form-group-modal div {
+    background-color: var(--light-white);
+}
+
+
+.form-group-modal div div{
+    display: flex;
+    width: 50%;
+    
+}
+
+.form-group-modal div div label{
+    color: var(--dark-blue);
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.form-group-modal div div input{
+    color: var(--dark-blue);
+    font-size: 14px;
+    border: 1px solid var(--dark-blue);
+    padding: 0.5rem;
+    border-radius: 4px;
+    -moz-appearance: radio !important;
+    -webkit-appearance: searchfield;
+
+}
+.form-group-modal div div input::-webkit-inner-spin-button{
+    
+    -webkit-appearance: searchfield;
+
+}
+.form-group-modal div div input:focus{
+    border: 1px solid greenyellow;
+    outline:none !important;
+    outline-width: 0 !important;
+}
+
+/* modificacion de btn submit para esta ocasion */
+
+.btn-submit{
+    margin: 0.5rem;
+}

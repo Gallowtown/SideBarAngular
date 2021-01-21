@@ -228,6 +228,15 @@
   .input-basic-container-succes .text-blank::after {
     color: #0fd64b;
   }
+
+  .input-checkbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: var(--normal-gray);
+  }
   
   /* ----- modificacion de webkits formularios -----*/
   
@@ -266,7 +275,7 @@
   input[type="number"] {
     -moz-appearance: textfield;
   }
-  
+
   select {
     -webkit-appearance: none;
     -moz-appearance: none;

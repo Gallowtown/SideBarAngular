@@ -19,7 +19,12 @@ import { Incumplientos2Component } from './incumplientos2/incumplientos2.compone
 import { ReclamosComponent } from './reclamos/reclamos.component';
 import { MacrorutascpvComponent } from './macrorutascpv/macrorutascpv.component';
 import { MacrorutasComponent } from './macrorutas/macrorutas.component';
-import { GenerarmacrorutasComponent } from './generarmacrorutas/generarmacrorutas.component'
+import { GenerarmacrorutasComponent } from './generarmacrorutas/generarmacrorutas.component';
+import { ModalYearComponent } from './modal-year/modal-year.component';
+import { MicrorrutasComponent } from './microrrutas/microrrutas.component';
+import { ModalFrecuenciaComponent } from './modal-frecuencia/modal-frecuencia.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { RegistrarmicrorutaComponent } from './registrarmicroruta/registrarmicroruta.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { GenerarmacrorutasComponent } from './generarmacrorutas/generarmacroruta
     ReclamosComponent,
     MacrorutascpvComponent,
     MacrorutasComponent,
-    GenerarmacrorutasComponent
+    GenerarmacrorutasComponent,
+    ModalYearComponent,
+    MicrorrutasComponent,
+    ModalFrecuenciaComponent,
+    MapaComponent,
+    RegistrarmicrorutaComponent
   ],
   imports: [
     BrowserModule,

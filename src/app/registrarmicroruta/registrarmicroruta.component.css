@@ -1,0 +1,95 @@
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png)
+    no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+
+/* checkbox custom */
+
+.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+  font-size: 14px;
+  color: var(--dark-blue);
+  margin-top: 10px;
+}
+
+/* .checkbox:focus-within .checkbox__label {
+  transform: scale(1.05);
+  opacity: 1;
+} */
+
+.checkbox__label {
+  line-height: 1;
+  transition: 180ms all ease-in-out;
+  opacity: 1;
+}
+
+.checkbox__input {
+  display: flex;
+  position: relative;
+
+  
+}
+
+.blank-space-checkbox{
+    position: absolute;
+    width: 3px;
+    height: 5px;
+    left: calc(55%);
+    z-index: 50;
+    top: calc(0px - 3px);
+    background-color: var(--normal-gray);
+}
+
+.checkbox__input input { /* para desaparcer el input real*/
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox__input:focus + .checkbox__control {
+  box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
+}
+
+.checkbox-gradient input:checked + .checkbox__control {
+  background: radial-gradient(brown 50%, rgba(255, 0, 0, 0) 50%);
+  
+}
+
+/* con pseudo elemento before */
+
+.checkbox-before .checkbox__control {
+  display: grid;
+  place-items: center;
+}
+
+.checkbox-before input + .checkbox__control::before {
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  box-shadow: inset 0.6em 0.6em var(--dark-blue);
+  border-radius: 50%;
+  transition: 180ms transform ease-in-out;
+  transform: scale(0);
+}
+
+.checkbox-before input:checked + .checkbox__control::before {
+  transform: scale(0.8);
+}
+
+.checkbox__control {
+  display: block;
+  width: 1em;
+  height: 1em;
+  /* border-radius: 50%; */
+  border: 0.1em solid var(--dark-blue);
+  transform: translateY(-0.05em);
+}
+

@@ -13,7 +13,11 @@ import { ListarComponent } from './listar/listar.component';
 import { ListartokenComponent } from './listartoken/listartoken.component';
 import { MacrorutasComponent } from './macrorutas/macrorutas.component';
 import { MacrorutascpvComponent } from './macrorutascpv/macrorutascpv.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { MicrorrutasComponent } from './microrrutas/microrrutas.component';
+import { ModalYearComponent } from './modal-year/modal-year.component';
 import { ReclamosComponent } from './reclamos/reclamos.component';
+import { RegistrarmicrorutaComponent } from './registrarmicroruta/registrarmicroruta.component';
 
 
 const routes: Routes = [
@@ -72,6 +76,22 @@ const routes: Routes = [
   {
     path:"generarmacro",
     component:GenerarmacrorutasComponent
+  },
+  {
+    path:"modal",
+    component:ModalYearComponent
+  },
+  {
+    path:"micro",
+    component:MicrorrutasComponent
+  },
+  {
+    path:"map",
+    component:MapaComponent
+  },
+  {
+    path:"microcrear",
+    component:RegistrarmicrorutaComponent
   }
 
 ];

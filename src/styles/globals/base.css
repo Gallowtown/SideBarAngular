@@ -57,8 +57,9 @@ li {
 }
 
 .svg-35 {
-  width: 32px;
-  height: 32px;
+  width: 15px;
+  height: 15px;
+  margin-top: 5px;
   fill: var(--dark-blue);
 }
 
@@ -70,6 +71,13 @@ li {
 
 .column-50 {
   width: 50%;
+}
+
+.column-33 {
+  float: left;
+  width: 33%;
+  /* padding: 0 10px; */
+  margin-bottom: 20px;
 }
 
 .margin-left-40 {
@@ -109,12 +117,7 @@ li {
   background-size: cover;
 }
 
-.column-33 {
-  float: left;
-  width: 33%;
-  /* padding: 0 10px; */
-  margin-bottom: 20px;
-}
+
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {
@@ -172,6 +175,7 @@ li {
 .btn-crear {
   margin-top: auto;
   margin-bottom: auto;
+  cursor: pointer;
 }
 
 .btn-crear a {
@@ -232,4 +236,10 @@ li {
   100% {
     transform: scale(1);
   }
+}
+
+/* modificacion de bootstrap */
+
+.modal-content{
+  border-radius: 10px;
 }

@@ -1,0 +1,69 @@
+.modal-year{
+    background-color: var(--light-white);
+    border-radius: 8px;
+    border: none;
+    /* max-height: ; */
+}
+
+.modal-year div {
+    background-color: var(--normal-blue);
+    display: flex;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.modal-year div > h4 {
+    
+    font-size: 18px;
+    padding: 15px 8px;
+    color: var(--light-white);
+    font-weight: 200;
+    margin: 0;
+
+}
+
+.modal-year div > a {
+    
+    font-size: 18px;
+    padding: 15px 12px;
+    color: var(--light-white);
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.modal-year div > a:hover {
+    
+    color: red;
+
+}
+
+.modal-year h5{
+    font-size: 14px;
+    padding: 0px 15px;
+    color: var(--dark-blue);
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+
+
+.modal-year table{
+    width: 95%;
+    margin: 0px 2.5% 2.5% 2.5%;
+    text-align: center;
+}
+.modal-year table tr td{
+    border: 1px solid var(--dark-gray);
+    font-weight: 200;
+}
+
+.modal-year table tr td a{
+    display: flex;
+    font-weight: 200;
+    color: var(--dark-blue);
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px 8px;
+}
