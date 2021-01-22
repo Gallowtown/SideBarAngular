@@ -1,14 +1,15 @@
 <ng-sidebar-container
 >
   <!-- menu lateral -->
-
+  
   <ng-sidebar
     mode="push"
     dock="true"
     dockedSize="60px"
     [(opened)]="abrirMenu"
-    (onClosed)="toggleMenuIcon()"
-    (onOpenStart)="toggleMenuIcon()"
+    (onClosed)="toggleMenuIcon(!menuClosed)"
+    (onOpenStart)="toggleMenuIcon(!menuClosed)"
+    
     closeOnClickOutside=true
   >
   <!-- header de menu lateral -->
@@ -102,20 +103,11 @@
         <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
         <a>Mapa</a>
       </li>
-
     </ul>
-    <div class="pl-4" style="margin-left: 135px;">
-        <button class="btn-egc" (click)="toggleAbrirMenu()">
-          <svg viewBox="0 0 100 80" width="25" height="25" fill="white">
-            <rect width="100" height="10" rx="7" ry="7"></rect>
-            <rect y="30" width="100" height="10" rx="7" ry="7"></rect>
-            <rect y="60" width="100" height="10" rx="7" ry="7"></rect>
-          </svg>
-        </button>
-    </div>
+    
   </ng-sidebar>
-  <div ng-sidebar-content class="background-total w-100 h-100"  >
-      <app-navbar></app-navbar>
+  <div  ng-sidebar-content class="background-total w-100 h-100"  >
+      <app-navbar (openedMenu)="toggleAbrirMenu($event)"  ></app-navbar>
   </div>
 
   <!-- contenido de la pagina -->

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,14 +12,14 @@ export class SidebarComponent implements OnInit {
   abrirMenu = false;
   menuClosed = true;
 
-    
+  // 
 
-  toggleAbrirMenu() {
-    this.abrirMenu = !this.abrirMenu
+  toggleAbrirMenu(abrirMenuHijo: boolean) {
+    this.abrirMenu = abrirMenuHijo
   }
 
-  toggleMenuIcon() {
-    this.menuClosed = !this.menuClosed
+  toggleMenuIcon(MenuIconHijo: boolean) {
+    this.menuClosed = MenuIconHijo 
   }
 
   constructor() { }
