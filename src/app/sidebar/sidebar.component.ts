@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,10 +12,14 @@ export class SidebarComponent implements OnInit {
   abrirMenu = false;
   menuClosed = true;
 
+  @Input() menuClosedPadre: boolean;
+  @Output() ejemplo1 = new EventEmitter<boolean>();
+
   // 
 
   toggleAbrirMenu(abrirMenuHijo: boolean) {
     this.abrirMenu = abrirMenuHijo
+    this.ejemplo1.emit(abrirMenuHijo)
   }
 
   toggleMenuIcon(MenuIconHijo: boolean) {

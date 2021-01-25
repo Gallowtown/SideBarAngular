@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   // menuClosed = true;
 
   @Output() openedMenu = new EventEmitter<boolean>();
-  @Output() closedIcon = new EventEmitter<boolean>();
+  // @Output() closedIcon = new EventEmitter<boolean>();
 
   @Input() menuClosedPadre: boolean = true;
   
@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit {
 
   toggleMenuIcon() {
     this.menuClosedPadre = !this.menuClosedPadre
-    this.closedIcon.emit(this.menuClosedPadre)
+    // this.closedIcon.emit(this.menuClosedPadre)
   }
 
   constructor() { }

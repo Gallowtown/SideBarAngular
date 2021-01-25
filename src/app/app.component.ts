@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  funcionejemplo(variable1: any) {
+    console.log(variable1)
+  }
+
   title = 'sideBar-Prueba';
   // abrirMenu = false;
   // menuClosed = true;
