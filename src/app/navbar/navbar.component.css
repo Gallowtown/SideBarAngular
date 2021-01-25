@@ -1,33 +1,71 @@
-/* navbar de contenidos  */
 
-.h-header-sticky {
+
+.navbar__group {
   position: fixed;
   top: 0;
-  width: calc(100% - 60px);
-  /* width: 100%; */
-}
-
-.h-header-sticky-open {
-  position: fixed;
-  top: 0;
-  width: calc(100% - 260px); /* este estilo no se esta viendo porque aun no mando nada al ts*/
-  /* width: 100%; */
-}
-
-.border-icon-header {
-  width: 36px;
-  height: 36px;
-  background-color: var(--normal-blue);
-  border-radius: 50px;
+  left: 0;
+  width: 100%;
   display: flex;
-  padding: 2.1px;
-  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 0rem 1rem 0rem;
+  height: 45px;
+  margin-bottom: 2rem;
+  z-index: 1000;
+  background-color: var(--dark-blue);
 }
 
-.a-navbar {
-  font: bold;
-  font-size: 18px;
+.navbar__group svg {
+  margin-left: 80px;
+}
+
+.navbar__group button{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__group ul{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.navbar__group ul li{
+  position: relative;
+  list-style: none;
+}
+
+.navbar__group   img{
+  position: relative;
+  list-style: none;
+  height: 25px;
+  width: 25px;
+  background-color: aquamarine;
+}
+.navbar__group  img:last-child{
+  position: relative;
+  list-style: none;
+  height: 35px;
+  width: 35px;
+  background-color: red;
+}
+
+.navbar__group ul li a {
+  position: relative;
+  margin: 0 8px 0 0 ;
+  text-decoration: none;
   color: var(--dark-yellow);
-  margin: auto;
+  transition: 0.5s;
+}
+
+.navbar__group ul li a:hover {
+
+  color: var(--normal-yellow);
+
 }
 

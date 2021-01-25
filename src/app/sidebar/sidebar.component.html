@@ -1,7 +1,7 @@
 <ng-sidebar-container
 >
   <!-- menu lateral -->
-  
+
   <ng-sidebar
     mode="push"
     dock="true"
@@ -9,8 +9,8 @@
     [(opened)]="abrirMenu"
     (onClosed)="toggleMenuIcon(!menuClosed)"
     (onOpenStart)="toggleMenuIcon(!menuClosed)"
-    
-    closeOnClickOutside=true
+
+
   >
   <!-- header de menu lateral -->
     <div class="row navbar background-blue h-header">
@@ -104,7 +104,7 @@
         <a>Mapa</a>
       </li>
     </ul>
-    
+
   </ng-sidebar>
   <div  ng-sidebar-content class="w-100 h-100"  >
       <app-navbar (openedMenu)="toggleAbrirMenu($event)"  ></app-navbar>
