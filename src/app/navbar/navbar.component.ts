@@ -14,16 +14,11 @@ export class NavbarComponent implements OnInit {
   @Output() openedMenu = new EventEmitter<boolean>();
   // @Output() closedIcon = new EventEmitter<boolean>();
 
-  @Input() menuClosedPadre: boolean = true;
-  
+  @Input() menuClosedPadre: string;
+
   toggleAbrirMenu() {
     this.abrirMenu = !this.abrirMenu
     this.openedMenu.emit(this.abrirMenu)
-  }
-
-  toggleMenuIcon() {
-    this.menuClosedPadre = !this.menuClosedPadre
-    // this.closedIcon.emit(this.menuClosedPadre)
   }
 
   constructor() { }

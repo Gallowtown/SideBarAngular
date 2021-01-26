@@ -12,10 +12,16 @@ export class SidebarComponent implements OnInit {
   abrirMenu = false;
   menuClosed = true;
 
-  @Input() menuClosedPadre: boolean;
+  // @Input() menuClosedPadre: boolean;
   @Output() ejemplo1 = new EventEmitter<boolean>();
 
-  // 
+  //
+
+  ejemplo = "manzana"
+
+  toggleEjemplo(){
+    this.ejemplo = "pera"
+  }
 
   toggleAbrirMenu(abrirMenuHijo: boolean) {
     this.abrirMenu = abrirMenuHijo
@@ -23,7 +29,7 @@ export class SidebarComponent implements OnInit {
   }
 
   toggleMenuIcon(MenuIconHijo: boolean) {
-    this.menuClosed = MenuIconHijo 
+    this.menuClosed = MenuIconHijo
   }
 
   constructor() { }

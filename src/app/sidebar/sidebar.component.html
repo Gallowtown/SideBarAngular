@@ -103,11 +103,14 @@
         <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
         <a>Mapa</a>
       </li>
+      <li>
+        <button (click)="toggleEjemplo()"></button>
+      </li>
     </ul>
 
   </ng-sidebar>
-  <div  ng-sidebar-content class="w-100 h-100"  >
-      <app-navbar (openedMenu)="toggleAbrirMenu($event)"  ></app-navbar>
+  <div ng-sidebar-content class="w-100 h-100"  >
+      <app-navbar [menuClosedPadre]="ejemplo" (openedMenu)="toggleAbrirMenu($event)"  ></app-navbar>
   </div>
 
   <!-- contenido de la pagina -->
