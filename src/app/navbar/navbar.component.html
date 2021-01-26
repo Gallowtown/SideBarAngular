@@ -1,17 +1,23 @@
-<header >
-  <nav class="navbar__group">
-    <button class="btn-egc" (click)="toggleAbrirMenu()">
-      <svg viewBox="0 0 100 80" width="25" height="25" fill="white">
-        <rect width="100" height="10" rx="7" ry="7"></rect>
-        <rect y="30" width="100" height="10" rx="7" ry="7"></rect>
-        <rect y="60" width="100" height="10" rx="7" ry="7"></rect>
-      </svg>
-    </button>
+<header class="sticky-header">
+  <nav class="navbar-group">
+    <ul>
+      <li>
+        <button (click)="toggleAbrirMenu()">
+          <svg viewBox="0 0 100 80" width="25" height="25" fill="white">
+            <rect width="100" height="10" rx="7" ry="7"></rect>
+            <rect y="30" width="100" height="10" rx="7" ry="7"></rect>
+            <rect y="60" width="100" height="10" rx="7" ry="7"></rect>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <a href=""><img src="../assets/48x_User.png" alt="Usuario icon"></a>
+      </li>
+    </ul>
     <ul>
       <li><a href=""> Usuario </a></li>
-      <li><a href=""><img class="img-48 mr-2" src="../assets/48x_User.png" alt="Usuario icon"></a></li>
-      <li><a href=""><img class="img-32" src="../assets/core-icon-gear.png" alt="Opciones Icon"></a></li>
-      <li style="color: beige;">{{ menuClosedPadre }}</li>
+      <li><a href=""><img src="../assets/48x_User.png" alt="Usuario icon"></a></li>
+      <li><a href=""><img src="../assets/core-icon-gear.png" alt="Opciones Icon"> <span>Opciones</span></a></li>
     </ul>
   </nav>
 </header>

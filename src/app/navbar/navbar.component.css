@@ -1,9 +1,15 @@
 
+/*  */
 
-.navbar__group {
-  position: fixed;
+.sticky-header{
+  position: sticky;
   top: 0;
-  left: 0;
+  z-index: 1000;
+}
+
+/* navbar */
+.navbar-group {
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -12,60 +18,92 @@
   padding: 0rem 1rem 0rem;
   height: 45px;
   margin-bottom: 2rem;
-  z-index: 1000;
   background-color: var(--dark-blue);
 }
 
-.navbar__group svg {
-  margin-left: 80px;
+.navbar-group button {
+  border: 0px;
+  background-color: var(--dark-blue);
 }
 
-.navbar__group button{
-  position: relative;
+.navbar-group svg {
+    /* background-color: var(--dark-blue); */
+}
+
+.navbar-group button{
+
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 0.3rem;
 }
 
-.navbar__group ul{
-  position: relative;
+.navbar-group ul{
+
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 1rem;
+  transition: 0.3s;
 }
 
-.navbar__group ul li{
-  position: relative;
+.navbar-group ul:hover{
+
+  transform: scale(1.2) translateX(-5%) translateY(-3%);
+}
+
+.navbar-group ul li{
+
   list-style: none;
 }
 
-.navbar__group   img{
-  position: relative;
-  list-style: none;
-  height: 25px;
-  width: 25px;
-  background-color: aquamarine;
+.navbar-group ul li:hover{
+
+  transform: scale(1.1);
 }
-.navbar__group  img:last-child{
-  position: relative;
+
+.navbar-group ul li:nth-child(2) a img{
+
   list-style: none;
   height: 35px;
   width: 35px;
-  background-color: red;
+}
+.navbar-group ul li:nth-child(3) a img{
+
+  list-style: none;
+  height: 30px;
+  width: 30px;
 }
 
-.navbar__group ul li a {
+.navbar-group ul li a {
   position: relative;
   margin: 0 8px 0 0 ;
   text-decoration: none;
   color: var(--dark-yellow);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
-.navbar__group ul li a:hover {
+.navbar-group ul li a:hover {
 
-  color: var(--normal-yellow);
+  color:var(--light-yellow);
+  /* font-size: 18px; */
+}
+
+.navbar-group ul li a span{
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top:0;
+  left: 0;
+  color: var(--dark-blue);
 
 }
 
+.navbar-group ul li a:hover span{
+  display: block;
+  position: absolute;
+  transition: 0.4s;
+  transform: translate(-25%, 160%);
+  color: var(--light-yellow);
+  text-shadow: 0px 2px 1px var(--dark-blue);
+}
