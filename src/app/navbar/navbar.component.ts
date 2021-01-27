@@ -9,12 +9,11 @@ export class NavbarComponent implements OnInit {
 
   title = 'sideBar-Prueba';
   abrirMenu = false;
-  // menuClosed = true;
 
   @Output() openedMenu = new EventEmitter<boolean>();
-  // @Output() closedIcon = new EventEmitter<boolean>();
 
-  @Input() menuClosedPadre: string;
+  @Input() inNavbar: string;
+
 
   toggleAbrirMenu() {
     this.abrirMenu = !this.abrirMenu

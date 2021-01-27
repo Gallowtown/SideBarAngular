@@ -8,28 +8,12 @@ import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
 
-  title = 'sideBar-Prueba';
+  title = 'Sidebar EGC';
   abrirMenu = false;
-  menuClosed = true;
 
-  // @Input() menuClosedPadre: boolean;
-  @Output() ejemplo1 = new EventEmitter<boolean>();
-
-  //
-
-  ejemplo = "manzana"
-
-  toggleEjemplo(){
-    this.ejemplo = "pera"
-  }
 
   toggleAbrirMenu(abrirMenuHijo: boolean) {
     this.abrirMenu = abrirMenuHijo
-    this.ejemplo1.emit(abrirMenuHijo)
-  }
-
-  toggleMenuIcon(MenuIconHijo: boolean) {
-    this.menuClosed = MenuIconHijo
   }
 
   constructor() { }

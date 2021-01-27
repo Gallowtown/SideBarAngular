@@ -203,19 +203,11 @@ li {
 
 .animation-circle span {
   position: absolute;
-  top: 5px;
-  left: 1px;
-  height: 40px;
-  width: 40px;
+  top: 3px;
+  left: 3px;
+  height: 38px;
+  width: 38px;
   border-radius: 25px;
-}
-
-.animation-circle.menudrop-animation span{
-  top: 5px;
-  left: 4px;
-}
-
-.animation-circle:focus-within span {
   background-color: var(--light-yellow);
   border-radius: 25px;
   transition: 0.4s;

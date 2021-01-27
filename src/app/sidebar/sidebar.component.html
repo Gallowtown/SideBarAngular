@@ -7,8 +7,6 @@
     dock="true"
     dockedSize="60px"
     [(opened)]="abrirMenu"
-    (onClosed)="toggleMenuIcon(!menuClosed)"
-    (onOpenStart)="toggleMenuIcon(!menuClosed)"
 
 
   >
@@ -16,8 +14,8 @@
     <div class="row navbar background-blue h-header">
       <div class="col">
         <div class="text-center h-header">
-          <img *ngIf="menuClosed"  class="w-100" src="..\assets\x_Genxapp.png" alt="sidebar img"  />
-          <img *ngIf="!menuClosed" class="menuIcon-header"  src="..\assets\test-icon-faucet.png" alt="sidebar img" />
+          <!-- <img *ngIf="menuClosed"  class="w-100" src="..\assets\x_Genxapp.png" alt="sidebar img"  />
+          <img *ngIf="!menuClosed" class="menuIcon-header"  src="..\assets\test-icon-faucet.png" alt="sidebar img" /> -->
         </div>
       </div>
     </div>
@@ -103,14 +101,12 @@
         <img src="..\assets\test-icon-faucet.png" alt="Side icon" />
         <a>Mapa</a>
       </li>
-      <li>
-        <button (click)="toggleEjemplo()"></button>
-      </li>
+
     </ul>
 
   </ng-sidebar>
   <div ng-sidebar-content class="w-100 h-100"  >
-      <app-navbar [menuClosedPadre]="ejemplo" (openedMenu)="toggleAbrirMenu($event)"  ></app-navbar>
+      <app-navbar (openedMenu)="toggleAbrirMenu($event)"  ></app-navbar>
   </div>
 
   <!-- contenido de la pagina -->

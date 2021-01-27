@@ -24,7 +24,8 @@ import { ModalYearComponent } from './modal-year/modal-year.component';
 import { MicrorrutasComponent } from './microrrutas/microrrutas.component';
 import { ModalFrecuenciaComponent } from './modal-frecuencia/modal-frecuencia.component';
 import { MapaComponent } from './mapa/mapa.component';
-import { RegistrarmicrorutaComponent } from './registrarmicroruta/registrarmicroruta.component'
+import { RegistrarmicrorutaComponent } from './registrarmicroruta/registrarmicroruta.component';
+import { Sidebar2Component } from './sidebar2/sidebar2.component'
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { RegistrarmicrorutaComponent } from './registrarmicroruta/registrarmicro
     MicrorrutasComponent,
     ModalFrecuenciaComponent,
     MapaComponent,
-    RegistrarmicrorutaComponent
+    RegistrarmicrorutaComponent,
+    Sidebar2Component
   ],
   imports: [
     BrowserModule,

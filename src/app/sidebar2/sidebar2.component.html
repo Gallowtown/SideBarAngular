@@ -1,0 +1,48 @@
+<ng-sidebar-container>
+  <ng-sidebar mode="push" dock="true" dockedSize="60px" [(opened)]="openMenu">
+    <div>
+      <div class="sidebar-icon-header"></div>
+      <!-- Menu de opciones sidebar ↓↓↓↓ -->
+      <ul class="sidebar-menu">
+        <li
+          *ngFor="let menuOption of selectedMenu; let pos = index"
+          [class]="pos === posSelected ? 'animation-circle clicked'  : ''"
+          [routerLink]="selectedMenu[pos].url != 'dropdown' ? selectedMenu[pos].url : null "
+          (click)="sendNavbarType(selectedMenu[pos].navbarType); selectMenuOption(pos)"
+        >
+          <span></span>
+          <img
+            [src]="selectedMenu[pos].icon"
+            [alt]="selectedMenu[pos].name + ' ' + 'icon '"
+          />
+          <div>
+            <a>{{ selectedMenu[pos].name }}</a>
+          </div>
+
+          <ul *ngIf="pos === posSelected" >
+            <li
+              *ngFor="let dropdownItem of selectedMenu[pos].dropdown"
+              [class]="dropdownItem.code === posDropdown && dropdownItem.url === selectedMenu[posSelected].url  ? 'clicked-dropdown' : ''"
+              [routerLink]="dropdownItem.url != 'dropdown' ? dropdownItem.url : null"
+              (click)="sendNavbarType(dropdownItem.navbarType); selectMenuOptionDropdown(dropdownItem.code)"
+            >
+              <img
+                [src]="dropdownItem.icon"
+                [alt]="dropdownItem.name + ' ' + 'icon '"
+              />
+              <div>
+                <a>{{ dropdownItem.name }}</a>
+              </div>
+
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Menu de opciones sidebar ↑↑↑↑ -->
+
+    </div>
+  </ng-sidebar>
+  <div ng-sidebar-content>
+    <app-navbar [inNavbar]="sendNavbar" (openedMenu)="toggleSideMenu($event)"></app-navbar>
+  </div>
+</ng-sidebar-container>

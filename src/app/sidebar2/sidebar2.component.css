@@ -1,0 +1,79 @@
+/* implementacion de sidebar (tratar de no modificar) */
+
+ng-sidebar-container {
+  height: 100vh;
+
+}
+
+::ng-deep .ng-sidebar {
+  background-color: var(--close-white);
+  width: 200px;
+  z-index: 2000;
+}
+
+/* Estilos de la cabecera del header */
+
+.sidebar-icon-header{
+  background-color: var(--normal-blue);
+  height: 45px;
+}
+
+/* Estilos del menu */
+
+.sidebar-menu{
+  margin-bottom: 0;
+  padding: 0 0.4rem;
+  margin: 0.5rem 0;
+
+}
+
+.sidebar-menu li   {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sidebar-menu li img {
+  height: 28px;
+  width: 28px;
+  margin-right: 0.8rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-menu li div {
+  display: flex;
+  color: var(--dark-blue);
+  align-items: center;
+}
+
+.sidebar-menu li div a {
+  font-weight: 200;
+}
+
+.sidebar-menu li ul {
+  padding-left: 0.8rem;
+}
+
+/* opciones del menu seleccionados */
+
+.clicked {
+  background-color: var(--light-white);
+}
+
+.clicked div a{
+  font-weight: 400 !important;
+}
+
+
+.clicked-dropdown div a{
+  font-weight: 400 !important;
+  color: var(--light-yellow);
+}
+
+.clicked-dropdown img{
+
+  filter: brightness(0) saturate(100%) invert(87%) sepia(91%) saturate(2760%) hue-rotate(328deg) brightness(97%) contrast(106%) ;
+}
+

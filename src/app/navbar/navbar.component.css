@@ -47,20 +47,20 @@
   transition: 0.3s;
 }
 
-.navbar-group ul:hover{
+/* .navbar-group ul:hover{
 
   transform: scale(1.2) translateX(-5%) translateY(-3%);
-}
+} */
 
 .navbar-group ul li{
 
   list-style: none;
 }
 
-.navbar-group ul li:hover{
+/* .navbar-group ul li:hover{
 
   transform: scale(1.1);
-}
+} */
 
 .navbar-group ul li:nth-child(2) a img{
 
@@ -99,11 +99,11 @@
 
 }
 
-.navbar-group ul li a:hover span{
+/* .navbar-group ul li a:hover span{
   display: block;
   position: absolute;
   transition: 0.4s;
   transform: translate(-25%, 160%);
   color: var(--light-yellow);
   text-shadow: 0px 2px 1px var(--dark-blue);
-}
+} */
