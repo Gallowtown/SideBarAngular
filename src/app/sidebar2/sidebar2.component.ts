@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common'
 
 export interface Menu {
   code: number;
@@ -21,7 +22,7 @@ export class Sidebar2Component implements OnInit {
   posSelected: number = -1;
   posDropdown: number = -1;
   sendNavbar: string = "ninguna"; // variable que recibe el navbar
-
+  urlClicked: string;
 
   selectedMenu: Array<Menu> = [
     {
@@ -83,6 +84,8 @@ export class Sidebar2Component implements OnInit {
     }
   ]
 
+
+
   selectMenuOption(position: number){
     this.posSelected = position
     console.log(this.posSelected)
@@ -101,9 +104,16 @@ export class Sidebar2Component implements OnInit {
     this.sendNavbar = navbarType
   }
 
-  constructor() { }
+  constructor(private location: Location) {
+
+   }
 
   ngOnInit(): void {
+    this.urlClicked = this.location.path().replace("/","")
+
+    this.posSelected = this.selectedMenu.findIndex(element => element.url === this.urlClicked)
+
+
   }
 
 }

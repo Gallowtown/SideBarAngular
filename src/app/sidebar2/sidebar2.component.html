@@ -22,7 +22,7 @@
           <ul *ngIf="pos === posSelected" >
             <li
               *ngFor="let dropdownItem of selectedMenu[pos].dropdown"
-              [class]="dropdownItem.code === posDropdown && dropdownItem.url === selectedMenu[posSelected].url  ? 'clicked-dropdown' : ''"
+              [class]="dropdownItem.code === posDropdown ? 'clicked-dropdown' : ''"
               [routerLink]="dropdownItem.url != 'dropdown' ? dropdownItem.url : null"
               (click)="sendNavbarType(dropdownItem.navbarType); selectMenuOptionDropdown(dropdownItem.code)"
             >

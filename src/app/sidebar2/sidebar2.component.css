@@ -31,6 +31,7 @@ ng-sidebar-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .sidebar-menu li img {
